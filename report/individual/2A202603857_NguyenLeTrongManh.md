@@ -46,8 +46,6 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| Hạng | Vấn đề | Vì sao chọn | Điều còn chưa chắc |
-|---:|---|---|---|
 | 1 | Ý 4: Bệnh nhân đã biết lời dặn ăn uống nhưng phải đọc kỹ từng món để chọn | Là bước cuối bệnh nhân phải qua trước khi đặt món, ảnh hưởng trực tiếp đến việc ăn đúng chế độ | Mỗi bữa hay mỗi ngày; chưa biết thực đơn có ghi thành phần không |
 | 2 | Ý 7: Bác sĩ đổi y lệnh ăn uống, thông tin đến điều dưỡng và bệnh nhân bị chậm | Liên quan an toàn người bệnh (tránh ăn hoặc nhận nhầm món cũ), có số đo độ trễ (5 phút bác sĩ đến điều dưỡng, 5 phút điều dưỡng đến bệnh nhân) | 10 phút là độ trễ chứ không phải thời gian làm việc; chưa có ví dụ thật món cũ vẫn được giao; chưa biết tần suất đổi y lệnh |
 | 3 | Ý 6: Thức ăn bệnh nhân bỏ thừa và lý do | Là hậu quả cuối của cả chuỗi; có số (2 phút/lần, 3-4 lần/ca) | Cần chốt ai là người ghi lý do bỏ thừa (điều dưỡng hay nhân viên dinh dưỡng); chưa biết Vinmec có ghi nhận không |
