@@ -9,8 +9,8 @@
 - Họ tên: Vũ Duy Khánh
 - MSSV: 2A202603865
 - Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:
-- Link repo nhóm:
+- Tên nhóm: A90
+- Link repo nhóm: https://github.com/ArsNeonci/K5-L3B-Day02-A90-DiscoveryProblemFraming
 
 ---
 
