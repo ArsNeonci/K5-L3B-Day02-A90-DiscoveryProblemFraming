@@ -48,7 +48,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 |---:|---|---|---|
 | 1 | Ý 4: Bệnh nhân đã biết lời dặn ăn uống nhưng phải đọc kỹ từng món để chọn | Là bước cuối bệnh nhân phải qua trước khi đặt món, ảnh hưởng trực tiếp đến việc ăn đúng chế độ | Mỗi bữa hay mỗi ngày; chưa biết thực đơn có ghi thành phần không |
 | 2 | Ý 7: Bác sĩ đổi y lệnh ăn uống, thông tin đến điều dưỡng và bệnh nhân bị chậm | Liên quan an toàn người bệnh (tránh ăn hoặc nhận nhầm món cũ), có số đo độ trễ (5 phút bác sĩ đến điều dưỡng, 5 phút điều dưỡng đến bệnh nhân) | 10 phút là độ trễ chứ không phải thời gian làm việc; chưa có ví dụ thật món cũ vẫn được giao; chưa biết tần suất đổi y lệnh |
-| 3 | Ý 6: Thức ăn bệnh nhân bỏ thừa và lý do | Là hậu quả cuối của cả chuỗi; có số (2 phút/lần, 3-4 lần/ca) | Cần chốt ai là người ghi lý do bỏ thừa (điều dưỡng hay nhân viên dinh dưỡng); chưa biết Vinmec có ghi nhận không |
+| 3 | Ý 6: Thức ăn bệnh nhân bỏ thừa và lý do | Là hậu quả cuối của cả chuỗi; có số (2 phút/lần, 3-4 lần/ca) | Cần chốt ai là người ghi lý do bỏ thừa (điều dưỡng hay nhân viên dinh dưỡng); chưa biết bệnh viện có ghi nhận không |
 
 
 ### Problem Card #1
@@ -69,7 +69,14 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 Quy trình nháp hiện tại:
 
-```text
+```
+[1 Nhận lời dặn ăn uống] → [2 Xem thực đơn hôm nay]
+→ [3 Đọc thành phần từng món]        ← BOTTLENECK
+→ [4 Tự đối chiếu với lời dặn]       ← BOTTLENECK
+→ [5 Đắn đo, hỏi lại nếu cần]        ← BOTTLENECK
+→ [6 Đặt món]
+
+Bước 3-5: khoảng 20 phút (ước lượng)
 
 ```
 
@@ -90,7 +97,14 @@ Quy trình nháp hiện tại:
 
 Quy trình nháp hiện tại:
 
-```text
+```
+[1 Bác sĩ đổi y lệnh ăn uống]
+→ [2 Thông tin đến điều dưỡng: ~5']        ← BOTTLENECK
+→ [3 Điều dưỡng báo bệnh nhân/người nhà: ~5'] ← BOTTLENECK
+→ [4 Bếp/dinh dưỡng biết chế độ mới: chưa rõ cách nào]
+→ [5 Giao món theo chế độ mới]
+
+Tổng độ trễ: khoảng 10 phút (độ trễ, không phải thời gian làm việc)
 
 ```
 
@@ -111,7 +125,13 @@ Quy trình nháp hiện tại:
 
 Quy trình nháp hiện tại:
 
-```text
+```
+[1 Thu khay, thấy thức ăn thừa]
+→ [2 Hỏi bệnh nhân lý do: ~2'/lần]   ← BOTTLENECK
+→ [3 Ghi nhận: chưa rõ ghi ở đâu]     ← BOTTLENECK
+→ [4 Chuyển cho bộ phận dinh dưỡng: chưa rõ có không]
+
+3-4 lần/ca, tương đương khoảng 6-8 phút/ca
 
 ```
 
@@ -201,9 +221,8 @@ Vấn đề của nhóm là bệnh nhân nội trú Vinmec đã biết lời d�
 ## 7. Tài liệu tham khảo
 | # | Nguồn | Link | Dùng cho việc gì | Ghi chú |
 |---:|---|---|---|---|
-| 1 | Hướng dẫn dành cho khách hàng điều trị nội trú tại Vinmec | https://www.vinmec.com/vie/bai-viet/huong-dan-danh-cho-khach-hang-dieu-tri-noi-tru-tai-vinmec-vi | Biết Vinmec cung cấp 3 bữa chính và 1 bữa phụ theo tư vấn của bác sĩ dinh dưỡng | Không có thông tin về cách bệnh nhân xem thực đơn hoặc đặt món |
-| 2 | Khoa Dinh dưỡng, Bệnh viện Vinmec Central Park | https://www.vinmec.com/vie/co-so-y-te/khoa-dinh-duong-benh-vien-da-khoa-quoc-te-vinmec-central-park | Biết khoa Dinh dưỡng phối hợp tiết chế để cung cấp suất ăn theo bệnh lý | Chỉ là một cơ sở của Vinmec |
-| 3 | Suy dinh dưỡng khi nằm viện, VnExpress | https://vnexpress.net/suy-dinh-duong-khi-nam-vien-4548150.html | Bối cảnh Việt Nam: nhiều bệnh viện ghi nhận 40-50% bệnh nhân suy dinh dưỡng khi nằm viện | Trích lời bác sĩ trong bài báo |
-| 4 | Khảo sát hài lòng của người bệnh nội trú về suất ăn, BVĐK tỉnh Thái Bình 2018 | https://lib.hutech.edu.vn/chi-tiet?id=322352 | Số tham khảo về mức hài lòng với thời gian giao suất ăn và món ăn | Khảo sát hài lòng, không phải dữ liệu về thời gian chờ |
+| 1 | Tuổi Trẻ (28/08/2019), dẫn nghiên cứu 887 người bệnh tại 6 bệnh viện công ở TP.HCM | https://tuoitre.vn/tang-suat-an-dinh-duong-khi-nam-vien-ra-sao-20190827215444484.htm | Chỉ khoảng 13% thức ăn đến từ khoa Dinh dưỡng; phần còn lại từ căn tin, mua ngoài, người nhà nấu. Chỉ 4,2% người bệnh ăn đủ 100% nhu cầu năng lượng; 34,1% suy dinh dưỡng | Số năm 2019, ở TP.HCM, dùng làm tham khảo |
+| 2 | Báo Pháp Luật Việt Nam (02/04/2015) | https://baophapluat.vn/nhieu-benh-vien-chua-quan-tam-den-dinh-duong-cho-nguoi-benh-post193543.html | Ngoài một số bệnh viện lớn, phần lớn bệnh viện chưa đáp ứng chế độ ăn cho người bệnh đang điều trị; khoảng 20% người bệnh nội trú cần chế độ ăn bệnh lý | Bài cũ, cần đối chiếu số mới hơn |
+| 3 | Thông tư 18/2020/TT-BYT về hoạt động dinh dưỡng trong bệnh viện (hiệu lực 01/01/2021) | https://luatvietnam.vn/tin-van-ban-moi/tren-100-giuong-thanh-lap-khoa-dinh-duong-186-27643-article.html | Bệnh viện từ 100 giường phải có khoa Dinh dưỡng; nếu không tự chế biến được thì thuê ngoài và khoa Dinh dưỡng giám sát | Thay Thông tư 08/2011. Có văn bản hợp nhất năm 2025, cần kiểm bản đang hiệu lực |
 
 -
