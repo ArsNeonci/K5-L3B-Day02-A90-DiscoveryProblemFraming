@@ -177,16 +177,22 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 Khi nghe pitch của các bạn, tôi nhận ra những ý tưởng thiếu actor rõ hoặc chưa biết lấy dữ liệu từ đâu thì rất khó đi tiếp. Vì vậy tôi hỏi các bạn: đối tượng chính là ai, dữ liệu lấy ở đâu, bên nào chịu trách nhiệm cung cấp, và có chấp nhận đánh đổi rủi ro không. Tôi cũng thấy mình hay chọn problem theo độ hấp dẫn, trong khi nhóm nên ưu tiên problem có dữ liệu thật và đo được.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 Có. Lập luận ban đầu của tôi cho ý 4 là "bệnh nhân nhận đề xuất món ăn dựa theo bệnh án". Đó là một giải pháp, chưa phải vấn đề, và còn quá rộng vì "bệnh án" kéo theo dữ liệu y tế nhạy cảm. Tôi nhận ra khi đối chiếu với yêu cầu tách opportunity khỏi solution. Tôi viết lại thành vấn đề: bệnh nhân đã biết lời dặn ăn uống nhưng khó biết nhanh món nào phù hợp, và giới hạn phạm vi ở chế độ ăn đã được xác nhận.
+
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 Có. Tôi nhận ba câu hỏi: lợi nhuận thực tế có tăng không, có tiết kiệm thời gian thật không, và thay thế bộ phận nào. Sau đó tôi đổi cách nhìn: con số 20 phút mới là ước lượng nên cần đo lại; AI hỗ trợ người có chuyên môn chứ không thay thế điều dưỡng hay bộ phận dinh dưỡng; và tôi thêm chỉ số an toàn bên cạnh chỉ số thời gian (số món không khớp chế độ ăn không được tăng).
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 Có, ở phần research. Tôi thấy các bệnh viện khác giải phần lọc món theo chế độ ăn chủ yếu bằng quy tắc gắn với dữ liệu chế độ ăn của bệnh nhân, không dùng AI, và khoản tốn nhất là xây dữ liệu thành phần món (một bệnh viện mất 18 tháng). Vì vậy tôi thu hẹp vai trò của AI về khâu giải thích hoặc ước tính thành phần khi thiếu dữ liệu.
+
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 Điều khó nhất là tách vấn đề khỏi giải pháp và giữ các con số trung thực. Nhiều con số của tôi (như 20 phút) mới là ước lượng, chưa phải số bấm giờ thật, nên tôi phải ghi rõ nguồn của từng số và chưa dám đặt target khi chưa có baseline đo được. Phần boundary cũng khó, vì bài liên quan dữ liệu y tế và phải xác định ai duyệt cuối.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 Tôi sẽ xem một thực đơn thật và hỏi vài điều dưỡng hoặc bệnh nhân trước khi chốt card, vì hai giả định quan trọng nhất (thực đơn chưa ghi nhãn chế độ ăn, và dữ liệu chế độ ăn lấy được ở dạng dùng được) vẫn chưa được kiểm chứng. Tôi cũng sẽ phản biện nhóm mạnh hơn ở câu hỏi: card nào thật sự cần AI, và card nào có thể giải bằng nhãn hoặc quy tắc.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 Vấn đề của nhóm là bệnh nhân nội trú Vinmec đã biết lời dặn ăn uống nhưng vẫn phải đọc thành phần từng món rồi tự đối chiếu, khoảng 20 phút theo ước lượng chưa đo. Quy trình hiện tại gồm nhận lời dặn, xem thực đơn, đọc thành phần, đối chiếu, hỏi lại nếu cần, rồi đặt món; điểm nghẽn là bước đọc và đối chiếu. Metric là thời gian chọn món so với baseline cần đo, số lần phải hỏi lại điều dưỡng, và chỉ số an toàn là số món không khớp chế độ ăn không được tăng. Boundary là AI không tự quyết định chế độ ăn hay dị ứng, chỉ dùng chế độ ăn đã được xác nhận và có người có chuyên môn duyệt. Về mức can thiệp, nền nên là Rule lọc món theo chế độ ăn, Workflow chỉ xét thêm cho phần giải thích, còn Agent bị loại vì quá rộng. Quyết định là Go có điều kiện, phạm vi nhỏ: trước hết xem thực đơn thật và kiểm tra dữ liệu chế độ ăn, và dừng nếu thực đơn đã có nhãn hoặc không lấy được dữ liệu.
 
