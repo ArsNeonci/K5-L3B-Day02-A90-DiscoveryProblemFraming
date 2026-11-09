@@ -6,10 +6,10 @@
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
-- Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:
+- Họ tên:Nguyễn Lê Trọng Mạnh
+- MSSV:2A202603857
+- Email trường (không bắt buộc, repo có thể để public): 26ai.manhnlt@vinuni.edu.vn
+- Tên nhóm: A90
 - Link repo nhóm:
 
 ---
@@ -20,17 +20,23 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+| 1 |Lặp lại |Khi gần tới giờ ăn, bệnh nhân muốn biết ngay hôm nay canteen có món gì, để chọn món mà không phải gọi điện hỏi |Bệnh nhân; Người trực căn tin |1-2phút/cuộc bệnh nhân có thể có 3 cuộc 1 ngày còn nhân viên căn tin có khả năng 30-40 cuộc 1 ngày |
+| 2 |Tốn thời gian | Khi chưa biết mình được ăn và phải kiêng gì, bệnh nhân muốn biết nhanh món phù hợp, để đặt món mà không phải chờ hỏi điều dưỡng|Bệnh nhân; điều dưỡng trực ca | 10-15 phút/lần bệnh nhân; 3-4 lần/ca điều dưỡng|
+| 3 | Tốn thời gian| Khi bệnh nhân hỏi một câu cần dựa vào tình trạng của họ, điều dưỡng muốn xem nhanh tiền sử và dị ứng liên quan, để trả lời đúng mà không phải mở lại cả bệnh án | Điều dưỡng; bệnh nhân chờ | 10-15 phút/lần bệnh nhân; 3-4 lần/ca điều dưỡng  |
+| 4 | Cần đọc, tổng hợp | Khi đã biết lời dặn ăn uống và đứng trước nhiều món, bệnh nhân muốn biết nhanh món nào phù hợp, để chọn tự tin mà không phải đọc kỹ từng món | Bệnh nhân | Khoảng 20 phút |
+| 5 | Pain từ người khác | Khi nhận đơn món, nhân viên bếp/dinh dưỡng muốn biết nhanh đơn có khớp y lệnh không, để giao đúng món mà không phải hỏi lại | Nhân viên bếp/dinh dưỡng; bệnh nhân | Khoảng 10 phút |
+| 6 | Cần đọc, tổng hợp | Khi bệnh nhân bỏ thừa thức ăn, nhân viên dinh dưỡng muốn nắm lý do (món, giờ giao, khẩu vị, tình trạng), để điều chỉnh phục vụ | Điều dưỡng | Khoảng 2 phút/lần mỗi bệnh nhân; 3-4 lần mỗi ca  |
+| 7 | Pain từ người khác | Khi bác sĩ đổi y lệnh ăn uống, bệnh nhân và người nhà muốn được báo ngay, để không ăn hoặc nhận nhầm món cũ | Bệnh nhân, người nhà; điều dưỡng | 5 phút từ bác sĩ đến điều dưỡng, 5 phút từ điều dưỡng đến bệnh nhân |
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
+| # | Ý | Nguồn | Giữ / Bỏ | Lý do |
+|---:|---|---|---|---|
+| 1 | Nhân viên bếp/dinh dưỡng đối chiếu đơn món với y lệnh | AI gợi ý | Giữ | Bổ sung góc nhìn phía bếp mà các ý trước chưa có. Actor và quy trình rõ, liên quan an toàn người bệnh. |
+| 2 | Thức ăn bệnh nhân bỏ thừa và lý do | AI gợi ý | Giữ | Là hậu quả cuối của cả chuỗi.|
+| 3 | Bác sĩ đổi y lệnh ăn, bệnh nhân và người nhà được báo | AI gợi ý | Giữ | Liên quan an toàn người bệnh.|
+| 4 | Điều dưỡng nhập hoặc chuyển thông tin chế độ ăn của bệnh nhân | AI gợi ý | **Bỏ** | Chồng với ý 5 và 7 (cùng là thông tin chế độ ăn đi qua nhiều bước). Tôi chưa quan sát được bước này nên không có số liệu |
 
+**AI hữu ích ở đâu:** nhắc các góc nhìn tôi chưa dùng (bếp, khoa Dinh dưỡng, người nhà), đưa tài liệu tham khảo, chỉ ra chỗ số liệu còn mơ hồ.
 -
 
 ---
