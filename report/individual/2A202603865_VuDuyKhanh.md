@@ -40,50 +40,56 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
+| 1 | Định hình đề lab (dòng 3) | Bước nghẽn cụ thể, 4 tiếng chỉ xong 1/5 task | Số phút là ước lượng. Chưa biết 45 phút định hình có phải nguyên nhân chính khiến chỉ xong 1/5 task không. Chưa biết bạn khác có gặp không |
+| 2 | Tra lệnh git khi đẩy bài (dòng 5) | Lặp lại 3–5 lần/tuần, quy trình rõ | Số phút là ước lượng. Chưa biết bạn khác có gặp không |
 | 3 | Đến lớp đúng giờ (dòng 2) | Có hậu quả rõ: muộn 2 lần/tuần, bị mất điểm danh | Số liệu là ước lượng và chưa khớp: theo số thì xuất phát 7h30 ngày nào cũng muộn, nhưng thực tế muộn 2 lần/tuần. Chưa xác định đường Nguyễn Trãi thuộc đoạn nào |
 
 ### Problem Card #1
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi nhận đề lab có 7–8 file md và nhiều yêu cầu, tôi muốn nắm được phải làm những yêu cầu gì, để làm xong nhiều task hơn trong giờ lab |
+| Actor | Học viên khóa AI thực chiến nhận đề lab gồm 7–8 file md |
+| Thời điểm / bối cảnh | Đầu buổi lab, ngay khi nhận đề |
+| Quy trình hiện tại (3–7 bước) | 1. Đọc README: 10' · 2. Đọc các file md còn lại: 15' · 3. Xâu chuỗi xem phải làm gì, làm gì trước: 20' · 4. Bắt đầu task đầu tiên. Số phút là ước lượng |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3, xâu chuỗi việc cần làm: 20'. Khó nhất là biết phần nào quan trọng và làm theo thứ tự nào |
+| Impact (nếu không giải thì sao) | Mất 45 phút trước khi bắt đầu task đầu tiên. Ở Lab1, 4 tiếng chỉ xong 1/5 task |
+| Success metric (baseline → target) | Thời gian từ lúc mở đề đến lúc bắt đầu task đầu tiên: từ 45 phút (ước lượng) xuống 15 phút, đo bằng cách bấm giờ ở các lab tiếp theo |
+| Phương án không dùng AI | Đọc RUBRIC và CHECKPOINTS trước, tự rút ra phần nào nặng điểm và thứ tự làm |
+| Giả thuyết về AI (nếu có) | Tóm tắt đề để đỡ phải đọc nhiều. Chưa kiểm chứng |
+| Cảm nhận nhanh | Chưa biết |
 
 Quy trình nháp hiện tại:
 
 ```text
+HIỆN TẠI: 45 phút trước khi bắt đầu task đầu tiên (ước lượng)
 
+[1 Đọc README: 10'] → [2 Đọc các file còn lại: 15']
+→ [3 Xâu chuỗi việc cần làm: 20'] ← BOTTLENECK → [4 Bắt đầu task đầu tiên]
 ```
 
 ### Problem Card #2
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi cần làm một thao tác git mà không nhớ lệnh, tôi muốn biết đúng lệnh cần chạy, để đẩy được bài lên GitHub mà không phải dừng lại tra lệnh |
+| Actor | Học viên phải đẩy bài lab lên GitHub, chưa nhớ lệnh git |
+| Thời điểm / bối cảnh | Khi làm xong bài và cần đẩy lên GitHub |
+| Quy trình hiện tại (3–7 bước) | 1. Tra hoặc hỏi lệnh add, commit, push: 3–5' · 2. Chạy lệnh · 3. Mở GitHub kiểm tra bài đã lên (bước 2 và 3 tổng cộng 1'). Số phút là ước lượng |
+| Bottleneck (bước nào, mất bao nhiêu phút) | Bước 1, tra hoặc hỏi lệnh: 3–5' mỗi lần |
+| Impact (nếu không giải thì sao) | 3–5 lần/tuần × 3–5 phút, khoảng 9–25 phút/tuần, và bị ngắt việc mỗi lần đẩy bài |
+| Success metric (baseline → target) | Số lần phải tra lệnh từ 3–5 lần/tuần xuống 0 lần/tuần, đo bằng cách tự đếm trong 2 tuần |
+| Phương án không dùng AI | Viết sẵn một script, chạy một lệnh là đẩy xong |
+| Giả thuyết về AI (nếu có) | Không cần thêm: hiện đã hỏi AI để tra lệnh, script có thể giải được việc này |
+| Cảm nhận nhanh | Rule |
 
 Quy trình nháp hiện tại:
 
 ```text
+HIỆN TẠI: khoảng 4–6 phút mỗi lần đẩy bài (ước lượng)
 
+[1 Tra hoặc hỏi lệnh: 3–5'] ← BOTTLENECK → [2 Chạy lệnh] → [3 Kiểm tra trên GitHub]
+(bước 2 và 3 tổng cộng 1')
 ```
 
 ### Problem Card #3
@@ -113,9 +119,9 @@ Khi tắc ở Nguyễn Trãi: thêm khoảng 20'
 
 ### Card muốn pitch nhất
 
-- Card số:
-- Vì sao:
-- Câu hỏi muốn nhóm phản biện:
+- Card số: 1 (định hình đề lab)
+- Vì sao: Bước nghẽn cụ thể (xâu chuỗi việc cần làm, 20 phút), và cùng một đề nên có thể kiểm chứng với bạn cùng lớp. Ở Lab1, tôi 4 tiếng chỉ xong 1/5 task.
+- Câu hỏi muốn nhóm phản biện: Đọc RUBRIC và CHECKPOINTS trước đã đủ để biết phần nào quan trọng và làm theo thứ tự nào chưa, hay vẫn kẹt ở bước xâu chuỗi?
 
 ### AI đã phản biện card thế nào
 
