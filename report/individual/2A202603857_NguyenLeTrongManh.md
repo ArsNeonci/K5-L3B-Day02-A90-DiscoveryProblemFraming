@@ -145,16 +145,16 @@ Quy trình nháp hiện tại:
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Trình bày card "bệnh nhân chọn món phù hợp lời dặn ăn uống" và lập luận vì sao nên chọn: actor rõ (bệnh nhân), quy trình rõ, so sánh được 4 mức can thiệp, phạm vi kiểm soát được khi chỉ dùng chế độ ăn đã được xác nhận. Khi nghe pitch của bạn khác, tôi hỏi sâu vào problem, đặc biệt là chỗ nào khó triển khai và không khả thi. | Nhóm chọn ý tưởng này và ưu tiên hướng ít rủi ro, dễ kiểm soát. |
+| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: (1) Bạn lấy dữ liệu ở đâu, bên nào chịu trách nhiệm cung cấp? (2) Có rủi ro nào quá lớn không, có chấp nhận đánh đổi không? | Giúp nhóm làm rõ actor và nguồn dữ liệu của candidate đó trước khi chấm điểm, và ưu tiên ý ít rủi ro, dễ triển khai. |
+| Nhận phản biện | Câu hỏi tôi nhận: (1) Có tiết kiệm thời gian thật không? (2) Thay thế bộ phận nào? Tôi đã sửa: thừa nhận con số 20 phút mới là ước lượng cần đo lại; làm rõ hướng là hỗ trợ người có chuyên môn chứ không thay thế điều dưỡng hay bộ phận dinh dưỡng; thêm chỉ số an toàn bên cạnh chỉ số thời gian; chuyển từ "đề xuất món theo bệnh án" sang "lọc và giải thích dựa trên chế độ ăn đã xác nhận". | Đổi cách nhìn bài toán, từ giải pháp rộng sang một vấn đề hẹp có boundary rõ. |
+| Gom cluster / cây OST | Research các problem nhóm đưa ra và tìm câu hỏi phản biện cho từng cái; chỉ ra các ý cùng một pattern (thông tin chế độ ăn không đến đúng người đúng lúc). | Giúp nhóm hiểu sâu hơn về pain point và tách pain khỏi giải pháp. |
+| Chọn candidate problem | Đề xuất các candidate có tiềm năng nhất sau giai đoạn pitch và phản biện, kèm lý do. | Góp phần để nhóm chọn được phương án có thể triển khai. |
+| Kiểm chứng / research | Research pain point và nghiệp vụ đặt món, chế độ ăn nội trú; tìm các hệ thống đã có (CBORD, Epic MyChart Bedside, Computrition) và nhận ra phần lọc món theo chế độ ăn thường giải bằng Rule, không phải AI. | Giúp nhóm đi nhanh hơn, tránh xây lại thứ đã có, và cân nhắc thu hẹp vai trò của AI. |
+| Quy trình nhóm | Tham gia đầy đủ các bước; góp phần tìm rủi ro của từng problem (dữ liệu bệnh án nhạy cảm, nguồn dữ liệu chế độ ăn, ai duyệt cuối). | Nhóm có nhiều góc nhìn hơn về pain point và rủi ro. |
+| Problem Statement | Đóng góp 3 problem card (bệnh nhân chọn món, đổi y lệnh ăn uống, ghi nhận thức ăn bỏ thừa) vào ngân hàng ý tưởng của nhóm. | Nhóm có nhiều lựa chọn để cân nhắc. |
+| Mức can thiệp AI | Cân nhắc 4 mức: No AI (nhãn chế độ ăn trên thực đơn), Rule (lọc theo chế độ ăn), Workflow (AI giải thích, người duyệt), Agent (loại vì quá rộng). Tôi dùng AI khoảng 35% công việc (ước lượng của tôi) chủ yếu để phản biện pain point của mình. | Hiểu vấn đề rõ hơn và có cơ sở giải thích, phản biện lại nhóm. |
+| Quyết định | Chọn ý tưởng hợp lý nhất trong ngân hàng problem; ghi rõ điều kiện cần kiểm trước khi triển khai (đo baseline, xem thực đơn thật, xác nhận nguồn dữ liệu chế độ ăn). | Giúp nhóm cân nhắc thêm về kế hoạch triển khai. |
 
 ---
 
@@ -162,12 +162,12 @@ Quy trình nháp hiện tại:
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Viết lại các ý thô thành Job Story, hỏi câu để làm rõ số liệu, gợi ý thêm góc nhìn (bếp, dinh dưỡng, đổi y lệnh, thức ăn bỏ thừa), tìm tài liệu tham khảo về đặt món và thức ăn thừa ở bệnh viện | Chỉ ra chỗ số liệu còn mơ hồ (của ai, mỗi bữa hay mỗi ngày), nhắc các góc nhìn tôi chưa dùng, đưa tài liệu tham khảo | Các ý AI gợi ý (bếp đối chiếu y lệnh, đổi y lệnh, thức ăn bỏ thừa, điều dưỡng chuyển thông tin chế độ ăn) ban đầu không có dữ kiện nào từ Vinmec, chỉ là lập luận. Tìm kiếm không thấy trang công khai nào mô tả cách bệnh nhân Vinmec xem thực đơn hoặc đặt món, nên quy trình trong Job Story vẫn phải tự xác nhận | Tự nghĩ 4 ý đầu, bổ sung số liệu cho cả 7 ý, sửa số của ý 2 (từ 30-40 xuống 10-15 phút), bỏ ý "điều dưỡng nhập hoặc chuyển thông tin chế độ ăn" |
+| CP2 Problem Card | Chấm điểm sơ bộ, soạn khung Problem Card, soạn bảng phản biện | Chỉ ra ý 2 và ý 3 cùng số liệu nên dễ đếm đôi, chỉ ra ý đổi y lệnh có thể không cần AI, nhắc thêm chỉ số an toàn bên cạnh chỉ số thời gian | Quy trình hiện tại trong card là giả thuyết AI dựng từ lời kể của tôi, chưa kiểm với điều dưỡng. Điểm chấm 27/23/20 là ước lượng của AI. Top 3 AI đề xuất ban đầu khác với lựa chọn của tôi | Chọn lại top 3 theo ưu tiên của mình (ý 4, 6, 7), chọn card muốn pitch, chọn lý do nào giữ hoặc bỏ |
+| CP4 Research | Tìm công cụ và case tương tự về đặt món theo chế độ ăn ở bệnh viện; soạn assumption map nháp và bộ câu hỏi phỏng vấn theo The Mom Test | Tìm ra các hệ thống đã có (CBORD, Epic MyChart Bedside, Computrition, Scottsdale) và chỉ ra họ giải phần lọc món bằng Rule gắn với dữ liệu chế độ ăn, không phải AI | Một link tìm được (Alton Memorial) mở ra trang không liên quan nên bị loại. Nhiều nguồn là trang quảng cáo của nhà cung cấp, không có số kết quả. Bài Scottsdale là năm 2008. Điểm assumption map do AI chấm nháp. Không tìm được tài liệu công khai nào về cách bệnh nhân Vinmec đặt món | *(bạn điền)* |
+| CP5 Quy trình | Dựng sơ đồ quy trình hiện tại (6 bước) và tương lai (5 bước) cho ý 4, đề xuất vị trí đặt Rule, AI và người duyệt | Ra nhanh khung quy trình và chỉ ra bước 3-5 là bottleneck | Quy trình hiện tại là giả thuyết dựng từ lời kể của tôi, chưa kiểm với điều dưỡng hay bệnh nhân. Chưa có baseline đo thật nên không đặt được target | *(bạn điền)* |
+| CP5–6 Problem Statement | Soạn Problem Statement v0 từ các dữ kiện tôi cung cấp | Gom đủ 6 trường và chỉ ra chỗ còn trống (baseline, tần suất) | Metric ban đầu chỉ có thời gian, chưa có chất lượng; vai trò của AI ở bước giải thích chưa được kiểm chứng sau research | ✎ Thêm chỉ số an toàn (món không khớp chế độ ăn không tăng) và giữ boundary: AI không tự quyết định chế độ ăn hay dị ứng |
+| CP6 Mức can thiệp / quyết định | Phân tích 4 mức No AI / Rule / Workflow / Agent, trả lời câu hỏi PAIR, đánh giá 4 rủi ro và đề xuất Go có điều kiện kèm pilot và ngưỡng dừng | Chỉ ra phần lọc món nên là Rule, Feasibility là rủi ro cao vì cần dữ liệu thành phần món, và đưa ngưỡng dừng cụ thể | Mức rủi ro AI chấm chưa dựa trên dữ liệu Vinmec; chưa biết thực đơn đã có nhãn chưa nên quyết định còn có điều kiện | ✎ Chấm lại mức rủi ro theo hiểu biết của nhóm, chọn mức can thiệp nhóm đồng ý, và quyết định có đi tiếp pilot hay không |
 
 ---
 
@@ -176,21 +176,28 @@ Quy trình nháp hiện tại:
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
-
+Khi nghe pitch của các bạn, tôi nhận ra những ý tưởng thiếu actor rõ hoặc chưa biết lấy dữ liệu từ đâu thì rất khó đi tiếp. Vì vậy tôi hỏi các bạn: đối tượng chính là ai, dữ liệu lấy ở đâu, bên nào chịu trách nhiệm cung cấp, và có chấp nhận đánh đổi rủi ro không. Tôi cũng thấy mình hay chọn problem theo độ hấp dẫn, trong khi nhóm nên ưu tiên problem có dữ liệu thật và đo được.
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
-
+Có. Lập luận ban đầu của tôi cho ý 4 là "bệnh nhân nhận đề xuất món ăn dựa theo bệnh án". Đó là một giải pháp, chưa phải vấn đề, và còn quá rộng vì "bệnh án" kéo theo dữ liệu y tế nhạy cảm. Tôi nhận ra khi đối chiếu với yêu cầu tách opportunity khỏi solution. Tôi viết lại thành vấn đề: bệnh nhân đã biết lời dặn ăn uống nhưng khó biết nhanh món nào phù hợp, và giới hạn phạm vi ở chế độ ăn đã được xác nhận.
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
-
+Có. Tôi nhận ba câu hỏi: lợi nhuận thực tế có tăng không, có tiết kiệm thời gian thật không, và thay thế bộ phận nào. Sau đó tôi đổi cách nhìn: con số 20 phút mới là ước lượng nên cần đo lại; AI hỗ trợ người có chuyên môn chứ không thay thế điều dưỡng hay bộ phận dinh dưỡng; và tôi thêm chỉ số an toàn bên cạnh chỉ số thời gian (số món không khớp chế độ ăn không được tăng).
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
-
+Có, ở phần research. Tôi thấy các bệnh viện khác giải phần lọc món theo chế độ ăn chủ yếu bằng quy tắc gắn với dữ liệu chế độ ăn của bệnh nhân, không dùng AI, và khoản tốn nhất là xây dữ liệu thành phần món (một bệnh viện mất 18 tháng). Vì vậy tôi thu hẹp vai trò của AI về khâu giải thích hoặc ước tính thành phần khi thiếu dữ liệu.
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
-
+Điều khó nhất là tách vấn đề khỏi giải pháp và giữ các con số trung thực. Nhiều con số của tôi (như 20 phút) mới là ước lượng, chưa phải số bấm giờ thật, nên tôi phải ghi rõ nguồn của từng số và chưa dám đặt target khi chưa có baseline đo được. Phần boundary cũng khó, vì bài liên quan dữ liệu y tế và phải xác định ai duyệt cuối.
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
-
+Tôi sẽ xem một thực đơn thật và hỏi vài điều dưỡng hoặc bệnh nhân trước khi chốt card, vì hai giả định quan trọng nhất (thực đơn chưa ghi nhãn chế độ ăn, và dữ liệu chế độ ăn lấy được ở dạng dùng được) vẫn chưa được kiểm chứng. Tôi cũng sẽ phản biện nhóm mạnh hơn ở câu hỏi: card nào thật sự cần AI, và card nào có thể giải bằng nhãn hoặc quy tắc.
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+Vấn đề của nhóm là bệnh nhân nội trú Vinmec đã biết lời dặn ăn uống nhưng vẫn phải đọc thành phần từng món rồi tự đối chiếu, khoảng 20 phút theo ước lượng chưa đo. Quy trình hiện tại gồm nhận lời dặn, xem thực đơn, đọc thành phần, đối chiếu, hỏi lại nếu cần, rồi đặt món; điểm nghẽn là bước đọc và đối chiếu. Metric là thời gian chọn món so với baseline cần đo, số lần phải hỏi lại điều dưỡng, và chỉ số an toàn là số món không khớp chế độ ăn không được tăng. Boundary là AI không tự quyết định chế độ ăn hay dị ứng, chỉ dùng chế độ ăn đã được xác nhận và có người có chuyên môn duyệt. Về mức can thiệp, nền nên là Rule lọc món theo chế độ ăn, Workflow chỉ xét thêm cho phần giải thích, còn Agent bị loại vì quá rộng. Quyết định là Go có điều kiện, phạm vi nhỏ: trước hết xem thực đơn thật và kiểm tra dữ liệu chế độ ăn, và dừng nếu thực đơn đã có nhãn hoặc không lấy được dữ liệu.
 
 ---
 
 ## 7. Tài liệu tham khảo
+| # | Nguồn | Link | Dùng cho việc gì | Ghi chú |
+|---:|---|---|---|---|
+| 1 | Hướng dẫn dành cho khách hàng điều trị nội trú tại Vinmec | https://www.vinmec.com/vie/bai-viet/huong-dan-danh-cho-khach-hang-dieu-tri-noi-tru-tai-vinmec-vi | Biết Vinmec cung cấp 3 bữa chính và 1 bữa phụ theo tư vấn của bác sĩ dinh dưỡng | Không có thông tin về cách bệnh nhân xem thực đơn hoặc đặt món |
+| 2 | Khoa Dinh dưỡng, Bệnh viện Vinmec Central Park | https://www.vinmec.com/vie/co-so-y-te/khoa-dinh-duong-benh-vien-da-khoa-quoc-te-vinmec-central-park | Biết khoa Dinh dưỡng phối hợp tiết chế để cung cấp suất ăn theo bệnh lý | Chỉ là một cơ sở của Vinmec |
+| 3 | Suy dinh dưỡng khi nằm viện, VnExpress | https://vnexpress.net/suy-dinh-duong-khi-nam-vien-4548150.html | Bối cảnh Việt Nam: nhiều bệnh viện ghi nhận 40-50% bệnh nhân suy dinh dưỡng khi nằm viện | Trích lời bác sĩ trong bài báo |
+| 4 | Khảo sát hài lòng của người bệnh nội trú về suất ăn, BVĐK tỉnh Thái Bình 2018 | https://lib.hutech.edu.vn/chi-tiet?id=322352 | Số tham khảo về mức hài lòng với thời gian giao suất ăn và món ăn | Khảo sát hài lòng, không phải dữ liệu về thời gian chờ |
 
 -
