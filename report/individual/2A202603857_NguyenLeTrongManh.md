@@ -119,15 +119,27 @@ Quy trình nháp hiện tại:
 
 ### Card muốn pitch nhất
 
-- Card số:
+- Card số: 1
 - Vì sao:
+1. **So sánh được cả 4 mức can thiệp.** Ý này có thể giải bằng No AI (nhãn chế độ ăn ngay trên thực đơn), Rule (lọc món theo chế độ ăn), Workflow (AI giải thích món phù hợp, người có chuyên môn duyệt). Agent bị loại vì quá rộng. Card 2 gần như chỉ có No AI hoặc Rule nên khó thấy vai trò của AI.
+2. **Actor rõ.** Bệnh nhân là người chịu pain trực tiếp ở mỗi bữa ăn.
+3. **Kiểm soát rủi ro được.** AI chỉ lọc từ chế độ ăn đã được bác sĩ hoặc điều dưỡng xác nhận, không tự quyết định chế độ ăn hay dị ứng.
 - Câu hỏi muốn nhóm phản biện:
+1. Nếu thực đơn hiện tại đã ghi nhãn chế độ ăn cho từng món, pain này còn đáng giải không, hay chỉ cần No AI?
+2. "Khoảng 20 phút" là mỗi bữa hay mỗi ngày? Nhóm sẽ đo thế nào để con số đáng tin trong thời gian ngắn?
+3. Ai nên là người duyệt cuối (điều dưỡng, chuyên viên dinh dưỡng, hay bác sĩ), và boundary "AI chỉ lọc từ chế độ ăn đã xác nhận" đã đủ chưa?
 
 ### AI đã phản biện card thế nào
 
 | Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
 |---|---|---|
-| | | |
+| Baseline 20 phút mới là ước lượng, chưa rõ mỗi bữa hay mỗi ngày | Đồng ý | Ghi rõ là ước lượng trong card; lên kế hoạch hỏi 3-5 bệnh nhân để đo lại |
+| Thực đơn có thể đã ghi nhãn chế độ ăn, khi đó No AI là đủ | Đồng ý | Đưa No AI thành phương án đầu tiên; thêm việc xem một thực đơn thật trước khi chốt |
+| AI lọc từ chế độ ăn "đã xác nhận" nhưng chưa biết dữ liệu này có ở dạng dùng được không (Feasibility) | Đồng ý | Thêm vào danh sách cần xác nhận: chế độ ăn của bệnh nhân được lưu ở đâu, ở dạng nào |
+| Metric chỉ đo thời gian, không đo an toàn: nhanh hơn nhưng chọn sai thì sao | Đồng ý | Đã thêm chỉ số an toàn trong card: số món giao không khớp chế độ không tăng |
+| Bệnh nhân đang bệnh, lớn tuổi hoặc mệt có thể khó tự dùng công cụ (Usability) | Đồng ý một phần | Ghi nhận rủi ro; giả định có người nhà hoặc điều dưỡng hỗ trợ khi cần, cần kiểm lại với bệnh nhân thật |
+| AI có thể bịa giải thích "vì sao món này phù hợp" | Đồng ý | Thêm vào boundary: AI chỉ dùng thành phần có trong thực đơn, không đưa nhận định y khoa |
+
 
 ---
 
