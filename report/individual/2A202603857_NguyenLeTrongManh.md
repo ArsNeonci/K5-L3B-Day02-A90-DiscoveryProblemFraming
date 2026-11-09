@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603857_NguyenLeTrongManh
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -10,7 +10,7 @@
 - MSSV:2A202603857
 - Email trường (không bắt buộc, repo có thể để public): 26ai.manhnlt@vinuni.edu.vn
 - Tên nhóm: A90
-- Link repo nhóm:
+- Link repo nhóm: https://github.com/ArsNeonci/K5-L3B-Day02-A90-DiscoveryProblemFraming
 
 ---
 
@@ -61,16 +61,22 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Quy trình hiện tại (nháp, cần xác nhận) | 1. Nhận lời dặn ăn uống từ điều dưỡng · 2. Xem thực đơn hôm nay · 3. Đọc thành phần từng món · 4. Tự đối chiếu với lời dặn · 5. Đắn đo, có thể hỏi lại · 6. Đặt món |
 | Bottleneck | Bước 3-5: đọc và đối chiếu từng món, khoảng 20 phút (số của tôi, chưa rõ mỗi bữa hay mỗi ngày) |
 | Impact | Mất thời gian của bệnh nhân; nếu chọn sai có thể ăn món không hợp chế độ. Tần suất và số bệnh nhân: cần đo |
-| Success metric | Baseline: khoảng 20 phút (cần đo lại, ghi rõ mỗi bữa hay mỗi ngày). Target đề xuất: giảm đáng kể thời gian chọn món, đặt sau khi có baseline. Chỉ số an toàn: số món giao không khớp chế độ không tăng |
+| Success metric | Baseline: khoảng 20 phút chưa rõ mỗi bữa/ngày, cần đo lại theo một lượt chọn món. Target đề xuất sau đo: giảm trung vị thời gian ≥30% trên các lượt tương đương; nếu xác nhận baseline là 20 phút/lượt thì mốc tương ứng ≤14 phút/lượt. Đo gồm thời gian kiểm/sửa và tách thời gian chờ; không có lựa chọn không khớp bảng duyệt trong tập thử. Chưa có kết quả đã đạt target. |
 | Phương án không dùng AI | Thực đơn ghi sẵn nhãn chế độ ăn phù hợp (ví dụ ít muối, đái tháo đường) ngay cạnh từng món |
-| Giả thuyết về AI | AI lọc và giải thích các món phù hợp từ chế độ ăn đã được bác sĩ hoặc điều dưỡng xác nhận; người có chuyên môn duyệt |
-| Cảm nhận nhanh | No AI hoặc Workflow (nếu nhãn thực đơn chưa đủ) |
+| Giả thuyết về AI | Rule có thể lọc theo bảng tương thích đã duyệt; AI chỉ là giả thuyết giải thích thông tin nếu cách đơn giản chưa đủ và có người kiểm. Không suy đoán thành phần thiếu hoặc tự xác định chế độ ăn. |
+| Cảm nhận nhanh | No AI trước; Rule khi cần lọc và đủ dữ liệu. Workflow chưa chọn, theo bản phân tích chung. |
 
 
 Quy trình nháp hiện tại:
 
 ```text
-
+[1 Nhận lời dặn đã xác nhận: chưa đo riêng]
+→ [2 Xem thực đơn: chưa đo riêng]
+→ [3 Đọc thông tin món: chưa đo riêng]
+→ [4 Đối chiếu lời dặn: chưa đo riêng] ← CỤM BƯỚC CẦN KIỂM CHỨNG
+→ [5 Hỏi điểm chưa rõ nếu có: chưa đo riêng]
+→ [6 Ghi nhận lựa chọn: chưa đo riêng]
+Ước lượng 20 phút chưa rõ phạm vi hoặc đơn vị; không cộng thêm thành tổng mới.
 ```
 
 ### Problem Card #2
@@ -83,7 +89,7 @@ Quy trình nháp hiện tại:
 | Quy trình hiện tại (nháp, cần xác nhận) | 1. Bác sĩ đổi y lệnh · 2. Thông tin đến điều dưỡng (khoảng 5 phút) · 3. Điều dưỡng báo bệnh nhân/người nhà (khoảng 5 phút) · 4. Bộ phận dinh dưỡng/bếp biết chế độ mới (chưa rõ bằng cách nào) · 5. Giao món theo chế độ mới |
 | Bottleneck | Bước 2-3: tổng độ trễ khoảng 10 phút. Bước 4 chưa rõ, cần hỏi |
 | Impact | Nếu có bữa ăn giao trong khoảng trễ, bệnh nhân có thể nhận hoặc ăn món cũ. Chưa có ví dụ thật; tần suất đổi y lệnh: cần đo |
-| Success metric | Baseline: khoảng 10 phút từ bác sĩ đến bệnh nhân (cần đo thêm). Target đề xuất: rút ngắn độ trễ; số món giao theo chế độ cũ sau khi đổi y lệnh bằng 0 |
+| Success metric | Baseline ước lượng: khoảng 10 phút từ thay đổi đến người nhận, chưa gồm toàn bộ kênh bếp. Target đề xuất: độ trễ trung vị ≤5 phút trên cùng phạm vi sau khi xác nhận baseline; không có món giao theo phiên bản đã hết hiệu lực trong tập thử. Ghi thời điểm đổi, nhận và xác nhận; đo riêng đường tới bếp. Chưa có kết quả đã đạt. |
 | Phương án không dùng AI | Chuẩn hóa một kênh báo duy nhất và bảng ghi chế độ ăn mới tại giường |
 | Giả thuyết về AI | Chưa thấy cần AI. Bài toán chủ yếu là báo đúng người đúng lúc, nên có thể giải bằng thông báo tự động theo quy tắc |
 | Cảm nhận nhanh | Rule hoặc No AI |
@@ -91,7 +97,12 @@ Quy trình nháp hiện tại:
 Quy trình nháp hiện tại:
 
 ```text
-
+[1 Bác sĩ thay đổi chỉ định: mốc bắt đầu]
+→ [2 Thông tin đến điều dưỡng: khoảng 5 phút, ước lượng]
+→ [3 Thông tin đến bệnh nhân/người nhà: khoảng 5 phút, ước lượng]
+→ [4 Bộ phận phụ trách suất ăn xác nhận phiên bản mới: chưa rõ thời gian/kênh]
+→ [5 Ghi nhận và phục vụ theo phiên bản hiện hành: chưa đo]
+Khoảng 10 phút chỉ là độ trễ ước lượng của bước 2–3, không phải thời gian thao tác hoặc toàn quy trình.
 ```
 
 ### Problem Card #3
@@ -104,7 +115,7 @@ Quy trình nháp hiện tại:
 | Quy trình hiện tại (nháp, cần xác nhận) | 1. Thu khay, thấy thừa · 2. Hỏi bệnh nhân lý do · 3. Ghi nhận (chưa rõ nơi ghi) · 4. Chuyển cho bộ phận dinh dưỡng (chưa rõ có không) |
 | Bottleneck | Bước 2-3: khoảng 2 phút/lần mỗi bệnh nhân, 3-4 lần/ca (tương đương khoảng 6-8 phút/ca) |
 | Impact | Không biết lý do thì không điều chỉnh được thực đơn hoặc giờ giao; bệnh nhân ăn ít khó hồi phục. Tỷ lệ thừa tại Vinmec: cần đo |
-| Success metric | Baseline: khoảng 2 phút/lần, 3-4 lần/ca. Target đề xuất: giảm thời gian ghi, tăng tỷ lệ lần thừa có ghi lý do. Cần đo hiện tại có bao nhiêu % được ghi |
+| Success metric | Baseline ước lượng: hỏi/ghi khoảng 2 phút/lần, 3–4 lần/ca; chưa có tỷ lệ ghi nhận hiện tại. Target đề xuất: ≤1 phút hỏi/ghi mỗi lần và 100% lần thuộc phạm vi quan sát có lý do hoặc trạng thái không trả lời, không ép đoán lý do. Bấm giờ và đếm lượt trong các ca thử được phép; không suy ra tỷ lệ cải thiện khi chưa có baseline đủ. |
 | Phương án không dùng AI | Phiếu chọn sẵn lý do (món, giờ giao, khẩu vị, bệnh) để đánh dấu nhanh |
 | Giả thuyết về AI | AI gom nhóm các lý do ghi dạng tự do và chỉ ra xu hướng cho bộ phận dinh dưỡng; chỉ dùng khi đã có dữ liệu ghi nhận |
 | Cảm nhận nhanh | Rule hoặc Workflow |
@@ -112,7 +123,11 @@ Quy trình nháp hiện tại:
 Quy trình nháp hiện tại:
 
 ```text
-
+[1 Thu khay, nhận diện còn thừa: chưa đo]
+→ [2 Hỏi lý do: chưa tách thời gian]
+→ [3 Ghi lý do hoặc không trả lời: chưa tách thời gian]
+→ [4 Chuyển thông tin cho người phụ trách: kênh và thời gian chưa xác nhận]
+Bước 2–3: khoảng 2 phút/lần theo ước lượng, 3–4 lần/ca.
 ```
 
 ### Card muốn pitch nhất
@@ -143,18 +158,57 @@ Quy trình nháp hiện tại:
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
+Đối chiếu biên tập ngày 09/11/2026: Linh đã xác nhận chọn Card #1 của tôi. [Bản chung](../team/group_report.md) hiện đề xuất No AI trước, Rule khi đủ dữ liệu và cần lọc; quyết định phân tích Not Yet. Các câu hỏi được truy vết ở [Q01–Q06](../assets/cp3-so-doi-chieu-phan-bien.md); chưa gán người hỏi khi không có ghi nhận. Những chỉnh sửa đồng bộ không xác nhận thay tôi rằng đã hoàn thành các hoạt động nhóm hoặc tự viết phần giải thích.
+
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | Trình bày card "bệnh nhân chọn món phù hợp lời dặn ăn uống" và lập luận vì sao nên chọn: actor rõ (bệnh nhân), quy trình rõ, so sánh được 4 mức can thiệp, phạm vi kiểm soát được khi chỉ dùng chế độ ăn đã được xác nhận. Khi nghe pitch của bạn khác, tôi hỏi sâu vào problem, đặc biệt là chỗ nào khó triển khai và không khả thi. | Nhóm chọn ý tưởng này và ưu tiên hướng ít rủi ro, dễ kiểm soát. |
 | Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: (1) Bạn lấy dữ liệu ở đâu, bên nào chịu trách nhiệm cung cấp? (2) Có rủi ro nào quá lớn không, có chấp nhận đánh đổi không? | Giúp nhóm làm rõ actor và nguồn dữ liệu của candidate đó trước khi chấm điểm, và ưu tiên ý ít rủi ro, dễ triển khai. |
-| Nhận phản biện | Câu hỏi tôi nhận: (1) Có tiết kiệm thời gian thật không? (2) Thay thế bộ phận nào? Tôi đã sửa: thừa nhận con số 20 phút mới là ước lượng cần đo lại; làm rõ hướng là hỗ trợ người có chuyên môn chứ không thay thế điều dưỡng hay bộ phận dinh dưỡng; thêm chỉ số an toàn bên cạnh chỉ số thời gian; chuyển từ "đề xuất món theo bệnh án" sang "lọc và giải thích dựa trên chế độ ăn đã xác nhận". | Đổi cách nhìn bài toán, từ giải pháp rộng sang một vấn đề hẹp có boundary rõ. |
+| Nhận phản biện | Q03 — Câu hỏi tôi ghi nhận: “Có tiết kiệm thời gian thật không?”; “Thay thế bộ phận nào?”; chưa xác nhận người hỏi. Tôi ghi đã làm rõ 20 phút là ước lượng cần đo, không thay người có chuyên môn và bổ sung chỉ số chất lượng. | Thu hẹp phạm vi từ suy luận theo bệnh án sang đối chiếu dữ liệu chế độ ăn đã xác nhận. Câu hỏi lợi nhuận ở 6.3 được giữ riêng tại Q06 để xác nhận, không tự quy về Q01 của Linh hỏi Chủ. |
 | Gom cluster / cây OST | Research các problem nhóm đưa ra và tìm câu hỏi phản biện cho từng cái; chỉ ra các ý cùng một pattern (thông tin chế độ ăn không đến đúng người đúng lúc). | Giúp nhóm hiểu sâu hơn về pain point và tách pain khỏi giải pháp. |
 | Chọn candidate problem | Đề xuất các candidate có tiềm năng nhất sau giai đoạn pitch và phản biện, kèm lý do. | Góp phần để nhóm chọn được phương án có thể triển khai. |
 | Kiểm chứng / research | Research pain point và nghiệp vụ đặt món, chế độ ăn nội trú; tìm các hệ thống đã có (CBORD, Epic MyChart Bedside, Computrition) và nhận ra phần lọc món theo chế độ ăn thường giải bằng Rule, không phải AI. | Giúp nhóm đi nhanh hơn, tránh xây lại thứ đã có, và cân nhắc thu hẹp vai trò của AI. |
 | Quy trình nhóm | Tham gia đầy đủ các bước; góp phần tìm rủi ro của từng problem (dữ liệu bệnh án nhạy cảm, nguồn dữ liệu chế độ ăn, ai duyệt cuối). | Nhóm có nhiều góc nhìn hơn về pain point và rủi ro. |
-| Problem Statement | Đóng góp 3 problem card (bệnh nhân chọn món, đổi y lệnh ăn uống, ghi nhận thức ăn bỏ thừa) vào ngân hàng ý tưởng của nhóm. | Nhóm có nhiều lựa chọn để cân nhắc. |
+| Problem Statement | Ba card tôi đề cử là đóng góp ở CP2/CP3. Chưa ghi rõ tôi đã sửa trường nào trong Problem Statement v0/v1; cần bổ sung đúng hoạt động. | Bản chung đã có v0/v1 nháp để đối chiếu; không dùng việc đề cử ba card làm bằng chứng đã viết Problem Statement. |
 | Mức can thiệp AI | Cân nhắc 4 mức: No AI (nhãn chế độ ăn trên thực đơn), Rule (lọc theo chế độ ăn), Workflow (AI giải thích, người duyệt), Agent (loại vì quá rộng). Tôi dùng AI khoảng 35% công việc (ước lượng của tôi) chủ yếu để phản biện pain point của mình. | Hiểu vấn đề rõ hơn và có cơ sở giải thích, phản biện lại nhóm. |
-| Quyết định | Chọn ý tưởng hợp lý nhất trong ngân hàng problem; ghi rõ điều kiện cần kiểm trước khi triển khai (đo baseline, xem thực đơn thật, xác nhận nguồn dữ liệu chế độ ăn). | Giúp nhóm cân nhắc thêm về kế hoạch triển khai. |
+| Quyết định | Đã ghi các điều kiện cần kiểm: baseline, thực đơn thật và nguồn chế độ ăn. Chưa có biên bản nhóm đánh giá lại rủi ro hoặc cho phép pilot. | Bản phân tích chung giữ Not Yet; cần xác nhận Value, dữ liệu và người duyệt trước khi cân nhắc triển khai. |
+
+<!-- CP3_AI_REVIEW_START -->
+### 4.1. CP3
+
+[Bản chuẩn 15 cặp câu hỏi / trả lời](../assets/cp3-phien-phan-bien-ai-uy-quyen.md).
+
+| ID | Vai hỏi | Vai trả lời | Card | Câu hỏi phản biện | Câu trả lời theo vai | Thay đổi đề xuất |
+|---|---|---|---|---|---|---|
+| P01 | Mạnh | Linh | L1 — Kiểm tra bài trước nộp | Kiểm tra 10 phút mà từng sót 2 vấn đề thì mục tiêu là nhanh hơn hay hiểu đúng hơn, và đã chứng minh giảm bao nhiêu phần trăm chưa? | Cần ưu tiên hiểu đúng yêu cầu. Hai vấn đề từng sót chưa được xác định cùng một lượt; chưa có cặp số trước/sau để kết luận giảm thời gian. Target là không vượt khoảng thời gian hiện tại và không còn bỏ sót do hiểu nhầm trong các lượt thử tiếp theo. | Giữ metric chất lượng; không dùng 50–56% như kết quả thật; ghi riêng mục chưa hiểu và cách xác nhận. |
+| P04 | Linh | Mạnh | M1 — Chọn món theo lời dặn | Khoảng 20 phút là mỗi bữa hay mỗi ngày; nếu chưa biết thì căn cứ nào để kết luận tiết kiệm thời gian? | Chưa rõ đơn vị và phạm vi nên chưa thể tính lợi ích. Trước hết quan sát một lượt từ bắt đầu xem thực đơn đến ghi nhận lựa chọn, tách thao tác/chờ. Target giảm trung vị ít nhất 30% là đề xuất sau khi đo baseline, không phải kết quả đã đạt. | Làm rõ đơn vị baseline và cách đo, không gán 20 phút cho một bước cụ thể. |
+| P05 | Chủ | Mạnh | M2 — Truyền thay đổi chế độ ăn | Rút ngắn đường bác sĩ–điều dưỡng–bệnh nhân đã đủ chưa nếu bộ phận nhận lựa chọn món chưa có thông tin mới? | Chưa đủ. Khoảng 10 phút hiện chỉ là độ trễ ước lượng của hai chặng đã nêu. Cần theo dõi người nhận thông tin tại bộ phận suất ăn và phiên bản có hiệu lực; không gọi 10 phút là tổng thời gian toàn quy trình. | Thêm điểm xác nhận phiên bản ở bộ phận suất ăn và kiểm trường hợp thay đổi khi đã ghi lựa chọn. |
+| P06 | Khánh | Mạnh | M3 — Ghi lý do thức ăn thừa | Actor chính là người hỏi/ghi hay người dùng dữ liệu, và giảm thời gian ghi có làm mất lý do quan trọng không? | Với phạm vi giảm thao tác hỏi/ghi, actor chính tạm chọn người thực hiện bước ghi; nhân viên dinh dưỡng là người dùng đầu ra. Vai trò cụ thể tại cơ sở còn phải xác nhận. Phiếu chọn sẵn có mục khác và không trả lời để tránh đoán lý do. | Tách actor chính/người nhận đầu ra; đo tỷ lệ ghi nhận cùng thời gian; giữ phản hồi tự do. |
+| P08 | Mạnh | Khánh | K2 — Tra lệnh Git | Nếu dùng script thay tra lệnh, làm sao tránh đẩy nhầm nhánh hoặc đưa cả file không định nộp lên repo? | Script chỉ là Rule hỗ trợ thao tác. Vẫn cần xem trạng thái, nhánh, remote và chọn file; dừng khi có xung đột hoặc khác trạng thái mong đợi. Không dùng mục tiêu không tra lệnh để bỏ qua kiểm tra trước khi đẩy bài. | Thêm bước kiểm trạng thái và chọn file, không tự stage/push mọi thay đổi. |
+| P12 | Mạnh | Chủ | C3 — Hồ sơ thuê trọ | Xem được phòng thật có chứng minh người nhận tiền cọc có quyền cho thuê không? | Không. Sự tồn tại của phòng và quyền cho thuê là hai điều phải kiểm riêng. Rà soát hồ sơ chỉ chỉ ra phần thiếu/mâu thuẫn; không xác thực được giấy tờ hoặc bảo đảm an toàn giao dịch chỉ từ ảnh và tin nhắn. | Có mục riêng cho quyền cho thuê/người nhận cọc; không suy đoán phần chưa rõ. |
+| P13 | Chủ | Mạnh | M1 — Phương án đơn giản | Nếu thực đơn đã có nhãn rõ và nhân viên đang hỗ trợ tốt, thêm AI mang lại lợi ích riêng nào? | Chưa có bằng chứng lợi ích riêng. Khi cách hiện tại hoặc nhãn đã đủ, dùng No AI; chỉ xem Rule khi phải đối chiếu nhiều điều kiện với bảng duyệt. Không chọn AI chỉ vì bài học có chủ đề AI. | Đưa hiệu quả nhãn/nhân viên hiện có thành giả định phản bác cần kiểm trước. |
+| P14 | Khánh | Mạnh | M1 — Dữ liệu và phiên bản | Nếu món thiếu thông tin thành phần hoặc chế độ ăn vừa thay đổi, hệ thống có tự ước tính hoặc tiếp tục dùng danh sách cũ không? | Không. Dữ liệu thiếu/cũ phải chuyển người phụ trách xác nhận; không tự suy đoán thành phần, dị ứng hoặc đổi chế độ ăn. Chưa có nguồn cập nhật và người duyệt là lý do giữ Not Yet cho triển khai. | Bổ sung chặn dữ liệu thiếu/cũ, kiểm phiên bản và đường quay về người hỗ trợ. |
+
+<!-- CP3_AI_REVIEW_END -->
+
+### 4.2. CP4–CP5.
+
+| Phần | Đầu ra và nguồn | Trạng thái |
+|---|---|---|
+| CP4 | [Research, sáu giả định, chín câu hỏi và kế hoạch kiểm chứng](../assets/cp4-research-va-ke-hoach-kiem-chung-ai.md) | Đã mở lại R0–R3/survey người thật |
+| CP5 | [Quy trình, metric, v0 và sáu phản biện](../assets/cp5-quy-trinh-va-phan-bien-ai.md) | Có mô hình sáu → năm bước, 20 → 14 phút thao tác tổng hợp; chi phí chuẩn bị tính riêng; chưa có số đo tại cơ sở |
+
+Ước lượng 20 phút gốc của Mạnh chưa được xác nhận đơn vị bằng mô hình này. Kết quả phân tích vẫn Not Yet.
+
+<!-- CP6_CP7_AI_START -->
+### 4.3. CP6 và CP7
+
+[CP6: No AI, Not Yet, v1, rủi ro và gate chất lượng](../assets/cp6-phan-tich-va-quyet-dinh-ai.md). [Kết quả kiểm fixture](../assets/cp6-ket-qua-kiem-tra-fixture.json) chỉ kiểm logic tài liệu; không phải kết quả sản phẩm.
+
+
+
+[Checklist trạng thái hoàn tất](../assets/cp7-checklist-hoan-tat-va-trang-thai.md) phân biệt đầu ra AI và bằng chứng chưa có.
+<!-- CP6_CP7_AI_END -->
 
 ---
 
@@ -163,15 +217,18 @@ Quy trình nháp hiện tại:
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
 | CP1 Scan | Viết lại các ý thô thành Job Story, hỏi câu để làm rõ số liệu, gợi ý thêm góc nhìn (bếp, dinh dưỡng, đổi y lệnh, thức ăn bỏ thừa), tìm tài liệu tham khảo về đặt món và thức ăn thừa ở bệnh viện | Chỉ ra chỗ số liệu còn mơ hồ (của ai, mỗi bữa hay mỗi ngày), nhắc các góc nhìn tôi chưa dùng, đưa tài liệu tham khảo | Các ý AI gợi ý (bếp đối chiếu y lệnh, đổi y lệnh, thức ăn bỏ thừa, điều dưỡng chuyển thông tin chế độ ăn) ban đầu không có dữ kiện nào từ Vinmec, chỉ là lập luận. Tìm kiếm không thấy trang công khai nào mô tả cách bệnh nhân Vinmec xem thực đơn hoặc đặt món, nên quy trình trong Job Story vẫn phải tự xác nhận | Tự nghĩ 4 ý đầu, bổ sung số liệu cho cả 7 ý, sửa số của ý 2 (từ 30-40 xuống 10-15 phút), bỏ ý "điều dưỡng nhập hoặc chuyển thông tin chế độ ăn" |
-| CP2 Problem Card | Chấm điểm sơ bộ, soạn khung Problem Card, soạn bảng phản biện | Chỉ ra ý 2 và ý 3 cùng số liệu nên dễ đếm đôi, chỉ ra ý đổi y lệnh có thể không cần AI, nhắc thêm chỉ số an toàn bên cạnh chỉ số thời gian | Quy trình hiện tại trong card là giả thuyết AI dựng từ lời kể của tôi, chưa kiểm với điều dưỡng. Điểm chấm 27/23/20 là ước lượng của AI. Top 3 AI đề xuất ban đầu khác với lựa chọn của tôi | Chọn lại top 3 theo ưu tiên của mình (ý 4, 6, 7), chọn card muốn pitch, chọn lý do nào giữ hoặc bỏ |
-| CP4 Research | Tìm công cụ và case tương tự về đặt món theo chế độ ăn ở bệnh viện; soạn assumption map nháp và bộ câu hỏi phỏng vấn theo The Mom Test | Tìm ra các hệ thống đã có (CBORD, Epic MyChart Bedside, Computrition, Scottsdale) và chỉ ra họ giải phần lọc món bằng Rule gắn với dữ liệu chế độ ăn, không phải AI | Một link tìm được (Alton Memorial) mở ra trang không liên quan nên bị loại. Nhiều nguồn là trang quảng cáo của nhà cung cấp, không có số kết quả. Bài Scottsdale là năm 2008. Điểm assumption map do AI chấm nháp. Không tìm được tài liệu công khai nào về cách bệnh nhân Vinmec đặt món | *(bạn điền)* |
-| CP5 Quy trình | Dựng sơ đồ quy trình hiện tại (6 bước) và tương lai (5 bước) cho ý 4, đề xuất vị trí đặt Rule, AI và người duyệt | Ra nhanh khung quy trình và chỉ ra bước 3-5 là bottleneck | Quy trình hiện tại là giả thuyết dựng từ lời kể của tôi, chưa kiểm với điều dưỡng hay bệnh nhân. Chưa có baseline đo thật nên không đặt được target | *(bạn điền)* |
+| CP2 Problem Card | Chấm điểm sơ bộ, soạn khung Problem Card, soạn bảng phản biện | Chỉ ra ý 2 và ý 3 cùng số liệu nên dễ đếm đôi, chỉ ra ý đổi y lệnh có thể không cần AI, nhắc thêm chỉ số an toàn bên cạnh chỉ số thời gian | Quy trình hiện tại trong card là giả thuyết AI dựng từ lời kể của tôi, chưa kiểm với điều dưỡng. Điểm chấm 27/23/20. Top 3 AI đề xuất ban đầu khác với lựa chọn của tôi | Chọn lại top 3 theo ưu tiên của mình (ý 4, 6, 7), chọn card muốn pitch, chọn lý do nào giữ hoặc bỏ |
+| CP4 Research | Đã ghi tìm các case đặt món; bản chung được AI bổ sung nguồn chính thức R0–R3 để nhóm tự kiểm | Có mô tả tính năng và ngoại lệ từ cơ sở sử dụng, không chỉ tên nhà cung cấp | Không suy ra kiến trúc bên trong là Rule/AI. Nguồn Vinmec có mô tả nhân viên nhận lựa chọn; chưa có baseline hoặc xác nhận quy trình từng cơ sở | Đề xuất cần tôi xác nhận sau khi tự mở nguồn: chỉ giữ claim có link hỗ trợ; bỏ claim 18 tháng chưa có nguồn trực tiếp; không thay research bằng phỏng vấn. |
+| CP5 Quy trình | Đã ghi nhờ AI dựng khung; bản chung hiện có sơ đồ hiện tại và hướng No AI/Rule | Phân biệt đọc/đối chiếu, xác nhận dữ liệu và kênh nhận lựa chọn | Quy trình chưa quan sát, thời gian từng bước chưa có; không mặc định bệnh nhân tự đặt trên app | Bản biên tập giữ đúng trạng thái giả thuyết; tôi cần xác nhận bước thực tế và ghi đóng góp cụ thể thay vì coi sơ đồ nháp là quy trình đã kiểm chứng. |
 | CP5–6 Problem Statement | Soạn Problem Statement v0 từ các dữ kiện tôi cung cấp | Gom đủ 6 trường và chỉ ra chỗ còn trống (baseline, tần suất) | Metric ban đầu chỉ có thời gian, chưa có chất lượng; vai trò của AI ở bước giải thích chưa được kiểm chứng sau research | ✎ Thêm chỉ số an toàn (món không khớp chế độ ăn không tăng) và giữ boundary: AI không tự quyết định chế độ ăn hay dị ứng |
-| CP6 Mức can thiệp / quyết định | Phân tích 4 mức No AI / Rule / Workflow / Agent, trả lời câu hỏi PAIR, đánh giá 4 rủi ro và đề xuất Go có điều kiện kèm pilot và ngưỡng dừng | Chỉ ra phần lọc món nên là Rule, Feasibility là rủi ro cao vì cần dữ liệu thành phần món, và đưa ngưỡng dừng cụ thể | Mức rủi ro AI chấm chưa dựa trên dữ liệu Vinmec; chưa biết thực đơn đã có nhãn chưa nên quyết định còn có điều kiện | ✎ Chấm lại mức rủi ro theo hiểu biết của nhóm, chọn mức can thiệp nhóm đồng ý, và quyết định có đi tiếp pilot hay không |
+| CP6 Mức can thiệp / quyết định | AI hỗ trợ so sánh No AI/Rule/Workflow/Agent; đề xuất Go có điều kiện trước đây được đối chiếu lại với dữ liệu còn thiếu | Làm rõ cần thử cách đơn giản, có bảng duyệt và fallback; không cần Agent | Chưa có người dùng, dữ liệu cơ sở hoặc người duyệt; không đủ căn cứ hạ các rủi ro Cao | Bản chung đề xuất Not Yet. Đây là hiệu chỉnh phân tích do AI hỗ trợ, chưa phải bằng chứng nhóm đã biểu quyết hoặc tôi đã thử thành công pilot. |
 
 ---
 
 ## 6. Reflection (CP7)
+
+<!-- CP7_AI_REFERENCE -->
+
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
@@ -185,7 +242,7 @@ Có. Lập luận ban đầu của tôi cho ý 4 là "bệnh nhân nhận đề 
 Có. Tôi nhận ba câu hỏi: lợi nhuận thực tế có tăng không, có tiết kiệm thời gian thật không, và thay thế bộ phận nào. Sau đó tôi đổi cách nhìn: con số 20 phút mới là ước lượng nên cần đo lại; AI hỗ trợ người có chuyên môn chứ không thay thế điều dưỡng hay bộ phận dinh dưỡng; và tôi thêm chỉ số an toàn bên cạnh chỉ số thời gian (số món không khớp chế độ ăn không được tăng).
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
-Có, ở phần research. Tôi thấy các bệnh viện khác giải phần lọc món theo chế độ ăn chủ yếu bằng quy tắc gắn với dữ liệu chế độ ăn của bệnh nhân, không dùng AI, và khoản tốn nhất là xây dữ liệu thành phần món (một bệnh viện mất 18 tháng). Vì vậy tôi thu hẹp vai trò của AI về khâu giải thích hoặc ước tính thành phần khi thiếu dữ liệu.
+Có, ở phần research. Điều tôi ghi nhận là đã có hệ thống hỗ trợ chọn món theo dữ liệu chế độ ăn, nên không nên mặc định phải tự xây Agent. Bản đối chiếu nguồn hiện tại không kết luận kiến trúc của các hệ thống là Rule hay AI và chưa có link trực tiếp cho con số 18 tháng, nên không giữ các claim đó làm kết luận. Vai trò AI nếu xem xét sau này chỉ là giải thích dữ liệu đã duyệt; thiếu thành phần thì chuyển người phụ trách, không dùng AI ước tính để quyết định món phù hợp.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 Điều khó nhất là tách vấn đề khỏi giải pháp và giữ các con số trung thực. Nhiều con số của tôi (như 20 phút) mới là ước lượng, chưa phải số bấm giờ thật, nên tôi phải ghi rõ nguồn của từng số và chưa dám đặt target khi chưa có baseline đo được. Phần boundary cũng khó, vì bài liên quan dữ liệu y tế và phải xác định ai duyệt cuối.
@@ -194,14 +251,14 @@ Có, ở phần research. Tôi thấy các bệnh viện khác giải phần l�
 Tôi sẽ xem một thực đơn thật và hỏi vài điều dưỡng hoặc bệnh nhân trước khi chốt card, vì hai giả định quan trọng nhất (thực đơn chưa ghi nhãn chế độ ăn, và dữ liệu chế độ ăn lấy được ở dạng dùng được) vẫn chưa được kiểm chứng. Tôi cũng sẽ phản biện nhóm mạnh hơn ở câu hỏi: card nào thật sự cần AI, và card nào có thể giải bằng nhãn hoặc quy tắc.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
-Vấn đề của nhóm là bệnh nhân nội trú Vinmec đã biết lời dặn ăn uống nhưng vẫn phải đọc thành phần từng món rồi tự đối chiếu, khoảng 20 phút theo ước lượng chưa đo. Quy trình hiện tại gồm nhận lời dặn, xem thực đơn, đọc thành phần, đối chiếu, hỏi lại nếu cần, rồi đặt món; điểm nghẽn là bước đọc và đối chiếu. Metric là thời gian chọn món so với baseline cần đo, số lần phải hỏi lại điều dưỡng, và chỉ số an toàn là số món không khớp chế độ ăn không được tăng. Boundary là AI không tự quyết định chế độ ăn hay dị ứng, chỉ dùng chế độ ăn đã được xác nhận và có người có chuyên môn duyệt. Về mức can thiệp, nền nên là Rule lọc món theo chế độ ăn, Workflow chỉ xét thêm cho phần giải thích, còn Agent bị loại vì quá rộng. Quyết định là Go có điều kiện, phạm vi nhỏ: trước hết xem thực đơn thật và kiểm tra dữ liệu chế độ ăn, và dừng nếu thực đơn đã có nhãn hoặc không lấy được dữ liệu.
+**Bản tham chiếu đã biên tập theo card chung; tôi cần tự diễn đạt và giải thích khi chấm.** Vấn đề là bệnh nhân có lời dặn ăn uống đã xác nhận nhưng khó đối chiếu với các món, còn khoảng 20 phút là ước lượng chưa rõ mỗi bữa hay mỗi ngày. Quy trình đọc và đối chiếu phải kiểm lại với cơ sở, kể cả kênh nhân viên nhận lựa chọn hiện có. Metric đề xuất là sau khi đo baseline cùng phạm vi, giảm trung vị thời gian ít nhất 30% và không có lựa chọn không khớp bảng duyệt trong tập thử. Boundary là không tự xác định chế độ ăn, dị ứng hoặc thành phần còn thiếu và không tự đặt món. Hướng thử bắt đầu từ No AI, chỉ dùng Rule nếu nhãn chưa đủ và có dữ liệu được duyệt; Workflow/Agent chưa được chọn. Bản phân tích hiện giữ Not Yet vì chưa có kiểm chứng người dùng, dữ liệu và người duyệt tại cơ sở.
 
 ---
 
 ## 7. Tài liệu tham khảo
 | # | Nguồn | Link | Dùng cho việc gì | Ghi chú |
 |---:|---|---|---|---|
-| 1 | Hướng dẫn dành cho khách hàng điều trị nội trú tại Vinmec | https://www.vinmec.com/vie/bai-viet/huong-dan-danh-cho-khach-hang-dieu-tri-noi-tru-tai-vinmec-vi | Biết Vinmec cung cấp 3 bữa chính và 1 bữa phụ theo tư vấn của bác sĩ dinh dưỡng | Không có thông tin về cách bệnh nhân xem thực đơn hoặc đặt món |
+| 1 | Hướng dẫn dành cho khách hàng điều trị nội trú tại Vinmec | https://www.vinmec.com/vie/bai-viet/huong-dan-danh-cho-khach-hang-dieu-tri-noi-tru-tai-vinmec-vi | Bối cảnh suất ăn; nguồn còn mô tả nhân viên phục vụ phòng nhận lựa chọn cho ngày hôm sau vào 13–15 giờ | Cần kiểm từng cơ sở, không suy ra có app tự đặt hoặc baseline 20 phút |
 | 2 | Khoa Dinh dưỡng, Bệnh viện Vinmec Central Park | https://www.vinmec.com/vie/co-so-y-te/khoa-dinh-duong-benh-vien-da-khoa-quoc-te-vinmec-central-park | Biết khoa Dinh dưỡng phối hợp tiết chế để cung cấp suất ăn theo bệnh lý | Chỉ là một cơ sở của Vinmec |
 | 3 | Suy dinh dưỡng khi nằm viện, VnExpress | https://vnexpress.net/suy-dinh-duong-khi-nam-vien-4548150.html | Bối cảnh Việt Nam: nhiều bệnh viện ghi nhận 40-50% bệnh nhân suy dinh dưỡng khi nằm viện | Trích lời bác sĩ trong bài báo |
 | 4 | Khảo sát hài lòng của người bệnh nội trú về suất ăn, BVĐK tỉnh Thái Bình 2018 | https://lib.hutech.edu.vn/chi-tiet?id=322352 | Số tham khảo về mức hài lòng với thời gian giao suất ăn và món ăn | Khảo sát hài lòng, không phải dữ liệu về thời gian chờ |

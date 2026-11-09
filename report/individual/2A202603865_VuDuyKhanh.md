@@ -103,7 +103,7 @@ HIỆN TẠI: khoảng 4–6 phút mỗi lần đẩy bài (ước lượng)
 | Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3, đoạn đường dài nhất: 75'. Khi tắc ở đường Nguyễn Trãi mất thêm khoảng 20'. Giờ xuất phát 7h30 không có thời gian dự phòng cho khoản này |
 | Impact (nếu không giải thì sao) | Muộn 2 lần/tuần, bị mất điểm danh |
 | Success metric (baseline → target) | Số lần đi muộn từ 2 lần/tuần xuống 0 lần/tuần, đo bằng cách ghi giờ đến lớp trong 2 tuần |
-| Phương án không dùng AI | Xuất phát sớm hơn: rời nhà lúc 6h45 thì kịp 9h ngay cả ngày tắc |
+| Phương án không dùng AI | Phương án tính theo các ước lượng đang có: nếu cần 135 phút di chuyển thì rời nhà 6h30 sẽ đến khoảng 8h45, có 15 phút dự phòng trước 9h. Rời 6h45 chỉ vừa đúng 9h, chưa có dự phòng. Đây là kế hoạch cần kiểm bằng giờ đến thật, không phải kết quả đã thực hiện. |
 | Giả thuyết về AI (nếu có) | Không có, vì đi sớm hơn đã giải được phần lớn |
 | Cảm nhận nhanh | No AI |
 
@@ -116,6 +116,8 @@ HIỆN TẠI: 115 phút từ lúc rời nhà, 135 phút nếu tắc (chưa tính
 
 Khi tắc ở Nguyễn Trãi: thêm khoảng 20'
 ```
+
+Kiểm tra tính nhất quán: 7h30 + 115 phút = 9h25; 7h30 + 135 phút = 9h45. Vì vậy các con số hiện tại chưa giải thích được vì sao chỉ muộn 2 lần/tuần. Giữ các mốc này là ước lượng cần xác nhận, không tự đổi giờ thực tế hoặc tần suất để làm khớp câu chuyện.
 
 ### Card muốn pitch nhất
 
@@ -133,6 +135,8 @@ Khi tắc ở Nguyễn Trãi: thêm khoảng 20'
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
+Đối chiếu chung: Linh đã xác nhận chọn Card #1 của Mạnh về chọn món phù hợp lời dặn ăn uống; xem [báo cáo nhóm](../team/group_report.md). No AI/Rule là hướng thử đề xuất, quyết định phân tích Not Yet. Các ô dưới đây chờ Khánh ghi hoạt động đã thực sự làm. [Phân công trong TEAM.md](../../TEAM.md) là đề xuất cho bước tiếp theo, không phải công việc đã hoàn thành.
+
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
 | Pitch Problem Card | | |
@@ -145,6 +149,42 @@ Khi tắc ở Nguyễn Trãi: thêm khoảng 20'
 | Problem Statement | | |
 | Mức can thiệp AI | | |
 | Quyết định | | |
+
+<!-- CP3_AI_REVIEW_START -->
+### 4.1. CP3 
+
+[Bản chuẩn 15 cặp câu hỏi / trả lời](../assets/cp3-phien-phan-bien-ai-uy-quyen.md). Các dòng dưới là vai Khánh.
+
+| ID | Vai hỏi | Vai trả lời | Card | Câu hỏi phản biện | Câu trả lời theo vai | Thay đổi đề xuất |
+|---|---|---|---|---|---|---|
+| P03 | Khánh | Linh | L3 — Chốt việc sau họp | Hai việc thiếu người phụ trách là chưa được phân công hay đã phân công nhưng biên bản ghi thiếu? | Chưa có dữ liệu phân biệt. Vì vậy cần tách trạng thái chưa phân công với chưa ghi nhận; người có liên quan xác nhận trước khi chốt. Không tự thêm tên cho đủ bảng. Khoảng 45 phút cũng cần đo riêng tổng hợp và chờ xác nhận. | Thêm bước xác nhận việc–người–hạn, trạng thái chưa chốt và cách đo thời gian. |
+| P06 | Khánh | Mạnh | M3 — Ghi lý do thức ăn thừa | Actor chính là người hỏi/ghi hay người dùng dữ liệu, và giảm thời gian ghi có làm mất lý do quan trọng không? | Với phạm vi giảm thao tác hỏi/ghi, actor chính tạm chọn người thực hiện bước ghi; nhân viên dinh dưỡng là người dùng đầu ra. Vai trò cụ thể tại cơ sở còn phải xác nhận. Phiếu chọn sẵn có mục khác và không trả lời để tránh đoán lý do. | Tách actor chính/người nhận đầu ra; đo tỷ lệ ghi nhận cùng thời gian; giữ phản hồi tự do. |
+| P07 | Linh | Khánh | K1 — Hiểu đề lab | Mất 45 phút định hình đề có chứng minh đó là nguyên nhân khiến 4 giờ chỉ xong 1/5 task không? | Chưa chứng minh quan hệ nguyên nhân. Còn có thể do độ khó thao tác hoặc kỹ năng. Cần đo riêng thời gian định hình, thực hiện và sửa lỗi; thử đọc rubric/checkpoint trước rồi so sánh các lab có phạm vi tương đương. | Không suy ra toàn bộ tiến độ chậm do đọc đề; giữ các phần thời gian riêng. |
+| P08 | Mạnh | Khánh | K2 — Tra lệnh Git | Nếu dùng script thay tra lệnh, làm sao tránh đẩy nhầm nhánh hoặc đưa cả file không định nộp lên repo? | Script chỉ là Rule hỗ trợ thao tác. Vẫn cần xem trạng thái, nhánh, remote và chọn file; dừng khi có xung đột hoặc khác trạng thái mong đợi. Không dùng mục tiêu không tra lệnh để bỏ qua kiểm tra trước khi đẩy bài. | Thêm bước kiểm trạng thái và chọn file, không tự stage/push mọi thay đổi. |
+| P09 | Chủ | Khánh | K3 — Đi học đúng giờ | Rời 7h30 và đi 115 phút sẽ tới 9h25; tại sao chỉ muộn 2 lần/tuần? | Các ước lượng chưa thống nhất nên chưa thể giải thích tần suất muộn. Cần đối chiếu giờ rời nhà/đến thật theo từng ngày. Nếu giả định đường đi mất 135 phút, kế hoạch rời 6h30 cho giờ đến 8h45 là phép tính dự phòng, không phải lịch sử đã thực hiện. | Ghi rõ mâu thuẫn và nguồn cần đo; không tự đổi số quá khứ để làm khớp. |
+| P10 | Khánh | Chủ | C1 — Xác minh chuyển tiền | Vì sao không kết luận ngay một tin nhắn là lừa đảo hoặc an toàn từ các dấu hiệu nội dung? | Nội dung chỉ nêu điều cần kiểm, không xác thực được danh tính. Đầu ra cần là nguồn đối chiếu độc lập và trạng thái chưa xác minh khi thiếu bằng chứng; AI không xác nhận an toàn để chuyển tiền hoặc thực hiện giao dịch. | Giữ đầu ra hỗ trợ xác minh, không phân loại chắc chắn chỉ bằng văn bản. |
+| P14 | Khánh | Mạnh | M1 — Dữ liệu và phiên bản | Nếu món thiếu thông tin thành phần hoặc chế độ ăn vừa thay đổi, hệ thống có tự ước tính hoặc tiếp tục dùng danh sách cũ không? | Không. Dữ liệu thiếu/cũ phải chuyển người phụ trách xác nhận; không tự suy đoán thành phần, dị ứng hoặc đổi chế độ ăn. Chưa có nguồn cập nhật và người duyệt là lý do giữ Not Yet cho triển khai. | Bổ sung chặn dữ liệu thiếu/cũ, kiểm phiên bản và đường quay về người hỗ trợ. |
+
+<!-- CP3_AI_REVIEW_END -->
+
+### 4.2. CP4–CP5 
+
+| Phần | Đầu ra và nguồn | Trạng thái |
+|---|---|---|
+| CP4 | [Research, sáu giả định, chín câu hỏi và kế hoạch kiểm chứng](../assets/cp4-research-va-ke-hoach-kiem-chung-ai.md) | Đã mở lại R0–R3; chưa có phỏng vấn/survey người thật |
+| CP5 | [Quy trình, metric, v0 và sáu phản biện](../assets/cp5-quy-trinh-va-phan-bien-ai.md) | Có mô hình sáu → năm bước, 20 → 14 phút thao tác tổng hợp; chi phí chuẩn bị tính riêng; chưa có số đo tại cơ sở |
+
+Phần thao tác mô hình có thể dùng để hiểu cách tính và đối chiếu sơ đồ; việc tài liệu tồn tại chưa chứng minh Khánh đã thực hiện kiểm tra. Kết quả phân tích vẫn Not Yet.
+
+<!-- CP6_CP7_AI_START -->
+### 4.3. CP6 và CP7
+
+[CP6: No AI, Not Yet, v1, rủi ro và gate chất lượng](../assets/cp6-phan-tich-va-quyet-dinh-ai.md). [Kết quả kiểm fixture](../assets/cp6-ket-qua-kiem-tra-fixture.json) chỉ kiểm logic tài liệu; không phải kết quả sản phẩm.
+
+
+
+[Checklist trạng thái hoàn tất](../assets/cp7-checklist-hoan-tat-va-trang-thai.md) phân biệt đầu ra AI và bằng chứng chưa có.
+<!-- CP6_CP7_AI_END -->
 
 ---
 
@@ -163,6 +203,9 @@ Khi tắc ở Nguyễn Trãi: thêm khoảng 20'
 
 ## 6. Reflection (CP7)
 
+<!-- CP7_AI_REFERENCE -->
+
+
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
@@ -178,6 +221,8 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Khung để tự giải thích: bệnh nhân có lời dặn đã xác nhận → đọc/đối chiếu món → baseline 20 phút còn cần kiểm đơn vị và đo lại → target sau đo, có kiểm chất lượng → không suy đoán phần thiếu hoặc tự đặt món → thử No AI rồi Rule → Not Yet vì thiếu kiểm chứng và dữ liệu cơ sở. Card đi học/Git của cá nhân vẫn ở CP2, không dùng làm kết quả nhóm trong 6.7.
 
 ---
 
