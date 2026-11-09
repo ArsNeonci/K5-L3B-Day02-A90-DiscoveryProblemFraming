@@ -5,7 +5,7 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: A90
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu):
 - Quyết định cuối: Go / Not Yet / No-Go
@@ -18,18 +18,18 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 1 | Linh | Khi chuẩn bị nộp bài lab, muốn biết bài còn thiếu yêu cầu nào | Sinh viên kiểm tra báo cáo cá nhân trước khi nộp | Bước 3, đối chiếu yêu cầu với bài: 12/30 phút (giả thuyết, chưa bấm giờ) | |
+| 2 | Linh | Khi nhận phần việc trong bài nhóm, muốn hiểu đầu ra, người phối hợp và hạn | Thành viên mới nhận nhiệm vụ trong nhóm lab | Bước 3, xác định yêu cầu đang có hiệu lực: 8 phút (giả thuyết) | |
+| 3 | Linh | Khi kết thúc họp nhóm, muốn xác định việc đã thống nhất, người phụ trách và hạn | Người ghi và gửi biên bản họp nhóm lab | Bước 2, phân biệt điều đã chốt với đề xuất: 10/25 phút (giả thuyết) | |
+| 4 | Mạnh | Khi đứng trước nhiều món, bệnh nhân muốn biết nhanh món nào phù hợp lời dặn ăn uống | Bệnh nhân nội trú | Bước 3–5, đọc và đối chiếu từng món: khoảng 20 phút | |
+| 5 | Mạnh | Khi bác sĩ đổi y lệnh ăn uống, bệnh nhân và người nhà muốn được báo ngay | Điều dưỡng; bệnh nhân và người nhà | Bước 2–3: tổng độ trễ khoảng 10 phút | |
+| 6 | Mạnh | Khi bệnh nhân bỏ thừa thức ăn, nhân viên dinh dưỡng muốn nắm lý do | Điều dưỡng; nhân viên dinh dưỡng (cần chốt actor chính) | Bước 2–3: khoảng 2 phút/lần, 3–4 lần/ca | |
+| 7 | Khánh | Khi nhận đề lab có 7–8 file md, muốn nắm được phải làm những yêu cầu gì | Học viên nhận đề lab | Bước 3, xâu chuỗi việc cần làm: 20 phút (ước lượng) | |
+| 8 | Khánh | Khi không nhớ lệnh git, muốn biết đúng lệnh cần chạy để đẩy bài lên GitHub | Học viên đẩy bài lab lên GitHub | Bước 1, tra hoặc hỏi lệnh: 3–5 phút/lần (ước lượng) | |
+| 9 | Khánh | Khi gặp tắc đường trên đường đến lớp, muốn đảm bảo đến đúng giờ | Học viên đi tàu điện và xe buýt, có mặt lúc 9h | Bước 3, đoạn đường dài nhất: 75 phút, tắc thêm khoảng 20 phút (ước lượng) | |
+| 10 | Chu | Khi nhận yêu cầu chuyển tiền gấp từ bên tự xưng, muốn biết cần xác minh gì qua kênh độc lập | Sinh viên dùng ngân hàng số | Bước 3, tìm đầu mối đáng tin: 8 phút/lượt (ước lượng) | |
+| 11 | Chu | Khi thấy tin tuyển dụng hấp dẫn trên mạng, muốn đối chiếu với nguồn chính thức | Sinh viên tìm thực tập, việc làm thêm | Bước 3, tìm nguồn gốc và so khớp: 12 phút/tin (ước lượng) | |
+| 12 | Chu | Khi bị thúc giục đặt cọc phòng trọ, muốn đối chiếu phòng, quyền cho thuê và các khoản phải trả | Sinh viên thuê hoặc chuyển trọ | Bước 3, rà soát điều kiện và phí: 12 phút/hồ sơ (ước lượng) | |
 
 ### 2.2. Cluster
 
