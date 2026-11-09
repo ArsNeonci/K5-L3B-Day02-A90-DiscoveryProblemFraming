@@ -36,7 +36,6 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | 3 | Bác sĩ đổi y lệnh ăn, bệnh nhân và người nhà được báo | AI gợi ý | Giữ | Liên quan an toàn người bệnh.|
 | 4 | Điều dưỡng nhập hoặc chuyển thông tin chế độ ăn của bệnh nhân | AI gợi ý | **Bỏ** | Chồng với ý 5 và 7 (cùng là thông tin chế độ ăn đi qua nhiều bước). Tôi chưa quan sát được bước này nên không có số liệu |
 
-**AI hữu ích ở đâu:** nhắc các góc nhìn tôi chưa dùng (bếp, khoa Dinh dưỡng, người nhà), đưa tài liệu tham khảo, chỉ ra chỗ số liệu còn mơ hồ.
 -
 
 ---
@@ -47,24 +46,28 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | Rank | Problem | Vì sao chọn | Điều còn chưa chắc |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| Hạng | Vấn đề | Vì sao chọn | Điều còn chưa chắc |
+|---:|---|---|---|
+| 1 | Ý 4: Bệnh nhân đã biết lời dặn ăn uống nhưng phải đọc kỹ từng món để chọn | Là bước cuối bệnh nhân phải qua trước khi đặt món, ảnh hưởng trực tiếp đến việc ăn đúng chế độ | Mỗi bữa hay mỗi ngày; chưa biết thực đơn có ghi thành phần không |
+| 2 | Ý 7: Bác sĩ đổi y lệnh ăn uống, thông tin đến điều dưỡng và bệnh nhân bị chậm | Liên quan an toàn người bệnh (tránh ăn hoặc nhận nhầm món cũ), có số đo độ trễ (5 phút bác sĩ đến điều dưỡng, 5 phút điều dưỡng đến bệnh nhân) | 10 phút là độ trễ chứ không phải thời gian làm việc; chưa có ví dụ thật món cũ vẫn được giao; chưa biết tần suất đổi y lệnh |
+| 3 | Ý 6: Thức ăn bệnh nhân bỏ thừa và lý do | Là hậu quả cuối của cả chuỗi; có số (2 phút/lần, 3-4 lần/ca) | Cần chốt ai là người ghi lý do bỏ thừa (điều dưỡng hay nhân viên dinh dưỡng); chưa biết Vinmec có ghi nhận không |
+
 
 ### Problem Card #1
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi đã biết lời dặn ăn uống và đứng trước nhiều món, bệnh nhân muốn biết nhanh món nào phù hợp, để chọn tự tin mà không phải đọc kỹ từng món |
+| Actor | Bệnh nhân nội trú (người chọn món) |
+| Thời điểm / bối cảnh | Trước mỗi bữa ăn, khi chọn hoặc đặt món |
+| Quy trình hiện tại (nháp, cần xác nhận) | 1. Nhận lời dặn ăn uống từ điều dưỡng · 2. Xem thực đơn hôm nay · 3. Đọc thành phần từng món · 4. Tự đối chiếu với lời dặn · 5. Đắn đo, có thể hỏi lại · 6. Đặt món |
+| Bottleneck | Bước 3-5: đọc và đối chiếu từng món, khoảng 20 phút (số của tôi, chưa rõ mỗi bữa hay mỗi ngày) |
+| Impact | Mất thời gian của bệnh nhân; nếu chọn sai có thể ăn món không hợp chế độ. Tần suất và số bệnh nhân: cần đo |
+| Success metric | Baseline: khoảng 20 phút (cần đo lại, ghi rõ mỗi bữa hay mỗi ngày). Target đề xuất: giảm đáng kể thời gian chọn món, đặt sau khi có baseline. Chỉ số an toàn: số món giao không khớp chế độ không tăng |
+| Phương án không dùng AI | Thực đơn ghi sẵn nhãn chế độ ăn phù hợp (ví dụ ít muối, đái tháo đường) ngay cạnh từng món |
+| Giả thuyết về AI | AI lọc và giải thích các món phù hợp từ chế độ ăn đã được bác sĩ hoặc điều dưỡng xác nhận; người có chuyên môn duyệt |
+| Cảm nhận nhanh | No AI hoặc Workflow (nếu nhãn thực đơn chưa đủ) |
+
 
 Quy trình nháp hiện tại:
 
@@ -76,16 +79,16 @@ Quy trình nháp hiện tại:
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi bác sĩ đổi y lệnh ăn uống, bệnh nhân và người nhà muốn được báo ngay, để không ăn hoặc nhận nhầm món cũ |
+| Actor | Điều dưỡng (người chuyển thông tin); bệnh nhân và người nhà (người nhận) |
+| Thời điểm / bối cảnh | Sau khi bác sĩ đổi chế độ ăn, trước bữa ăn kế tiếp |
+| Quy trình hiện tại (nháp, cần xác nhận) | 1. Bác sĩ đổi y lệnh · 2. Thông tin đến điều dưỡng (khoảng 5 phút) · 3. Điều dưỡng báo bệnh nhân/người nhà (khoảng 5 phút) · 4. Bộ phận dinh dưỡng/bếp biết chế độ mới (chưa rõ bằng cách nào) · 5. Giao món theo chế độ mới |
+| Bottleneck | Bước 2-3: tổng độ trễ khoảng 10 phút. Bước 4 chưa rõ, cần hỏi |
+| Impact | Nếu có bữa ăn giao trong khoảng trễ, bệnh nhân có thể nhận hoặc ăn món cũ. Chưa có ví dụ thật; tần suất đổi y lệnh: cần đo |
+| Success metric | Baseline: khoảng 10 phút từ bác sĩ đến bệnh nhân (cần đo thêm). Target đề xuất: rút ngắn độ trễ; số món giao theo chế độ cũ sau khi đổi y lệnh bằng 0 |
+| Phương án không dùng AI | Chuẩn hóa một kênh báo duy nhất và bảng ghi chế độ ăn mới tại giường |
+| Giả thuyết về AI | Chưa thấy cần AI. Bài toán chủ yếu là báo đúng người đúng lúc, nên có thể giải bằng thông báo tự động theo quy tắc |
+| Cảm nhận nhanh | Rule hoặc No AI |
 
 Quy trình nháp hiện tại:
 
@@ -97,16 +100,16 @@ Quy trình nháp hiện tại:
 
 | Trường | Nội dung |
 |---|---|
-| Job Story | Khi …, tôi muốn …, để … |
-| Actor | |
-| Thời điểm / bối cảnh | |
-| Quy trình hiện tại (3–7 bước) | |
-| Bottleneck (bước nào, mất bao nhiêu phút) | |
-| Impact (nếu không giải thì sao) | |
-| Success metric (baseline → target) | |
-| Phương án không dùng AI | |
-| Giả thuyết về AI (nếu có) | |
-| Cảm nhận nhanh | No AI / Rule / Workflow / Agent / Chưa biết |
+| Job Story | Khi bệnh nhân bỏ thừa thức ăn, nhân viên dinh dưỡng muốn nắm lý do (món, giờ giao, khẩu vị, tình trạng), để điều chỉnh phục vụ |
+| Actor | Điều dưỡng (người hỏi và ghi); nhân viên dinh dưỡng (người dùng thông tin). Cần chốt ai là actor chính |
+| Thời điểm / bối cảnh | Sau mỗi bữa, khi thu khay |
+| Quy trình hiện tại (nháp, cần xác nhận) | 1. Thu khay, thấy thừa · 2. Hỏi bệnh nhân lý do · 3. Ghi nhận (chưa rõ nơi ghi) · 4. Chuyển cho bộ phận dinh dưỡng (chưa rõ có không) |
+| Bottleneck | Bước 2-3: khoảng 2 phút/lần mỗi bệnh nhân, 3-4 lần/ca (tương đương khoảng 6-8 phút/ca) |
+| Impact | Không biết lý do thì không điều chỉnh được thực đơn hoặc giờ giao; bệnh nhân ăn ít khó hồi phục. Tỷ lệ thừa tại Vinmec: cần đo |
+| Success metric | Baseline: khoảng 2 phút/lần, 3-4 lần/ca. Target đề xuất: giảm thời gian ghi, tăng tỷ lệ lần thừa có ghi lý do. Cần đo hiện tại có bao nhiêu % được ghi |
+| Phương án không dùng AI | Phiếu chọn sẵn lý do (món, giờ giao, khẩu vị, bệnh) để đánh dấu nhanh |
+| Giả thuyết về AI | AI gom nhóm các lý do ghi dạng tự do và chỉ ra xu hướng cho bộ phận dinh dưỡng; chỉ dùng khi đã có dữ liệu ghi nhận |
+| Cảm nhận nhanh | Rule hoặc Workflow |
 
 Quy trình nháp hiện tại:
 
