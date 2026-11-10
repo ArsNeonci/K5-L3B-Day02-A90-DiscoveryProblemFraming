@@ -103,7 +103,7 @@ HIỆN TẠI: khoảng 4–6 phút mỗi lần đẩy bài (ước lượng)
 | Bottleneck (bước nào, mất bao nhiêu phút) | Bước 3, đoạn đường dài nhất: 75'. Khi tắc ở đường Nguyễn Trãi mất thêm khoảng 20'. Giờ xuất phát 7h30 không có thời gian dự phòng cho khoản này |
 | Impact (nếu không giải thì sao) | Muộn 2 lần/tuần, bị mất điểm danh |
 | Success metric (baseline → target) | Số lần đi muộn từ 2 lần/tuần xuống 0 lần/tuần, đo bằng cách ghi giờ đến lớp trong 2 tuần |
-| Phương án không dùng AI | Phương án tính theo các ước lượng đang có: nếu cần 135 phút di chuyển thì rời nhà 6h30 sẽ đến khoảng 8h45, có 15 phút dự phòng trước 9h. Rời 6h45 chỉ vừa đúng 9h, chưa có dự phòng. Đây là kế hoạch cần kiểm bằng giờ đến thật, không phải kết quả đã thực hiện. |
+| Phương án không dùng AI | Xuất phát sớm hơn: rời nhà lúc 6h45 thì kịp 9h ngay cả ngày tắc |
 | Giả thuyết về AI (nếu có) | Không có, vì đi sớm hơn đã giải được phần lớn |
 | Cảm nhận nhanh | No AI |
 
@@ -116,8 +116,6 @@ HIỆN TẠI: 115 phút từ lúc rời nhà, 135 phút nếu tắc (chưa tính
 
 Khi tắc ở Nguyễn Trãi: thêm khoảng 20'
 ```
-
-Kiểm tra tính nhất quán: 7h30 + 115 phút = 9h25; 7h30 + 135 phút = 9h45. Vì vậy các con số hiện tại chưa giải thích được vì sao chỉ muộn 2 lần/tuần. Giữ các mốc này là ước lượng cần xác nhận, không tự đổi giờ thực tế hoặc tần suất để làm khớp câu chuyện.
 
 ### Card muốn pitch nhất
 
@@ -135,56 +133,18 @@ Kiểm tra tính nhất quán: 7h30 + 115 phút = 9h25; 7h30 + 135 phút = 9h45.
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
-Đối chiếu chung: Linh đã xác nhận chọn Card #1 của Mạnh về chọn món phù hợp lời dặn ăn uống; xem [báo cáo nhóm](../team/group_report.md). No AI/Rule là hướng thử đề xuất, quyết định phân tích Not Yet. Các ô dưới đây chờ Khánh ghi hoạt động đã thực sự làm. [Phân công trong TEAM.md](../../TEAM.md) là đề xuất cho bước tiếp theo, không phải công việc đã hoàn thành.
-
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
-
-<!-- CP3_AI_REVIEW_START -->
-### 4.1. CP3 
-
-[Bản chuẩn 15 cặp câu hỏi / trả lời](../assets/cp3-phien-phan-bien-ai-uy-quyen.md). Các dòng dưới là vai Khánh.
-
-| ID | Vai hỏi | Vai trả lời | Card | Câu hỏi phản biện | Câu trả lời theo vai | Thay đổi đề xuất |
-|---|---|---|---|---|---|---|
-| P03 | Khánh | Linh | L3 — Chốt việc sau họp | Hai việc thiếu người phụ trách là chưa được phân công hay đã phân công nhưng biên bản ghi thiếu? | Chưa có dữ liệu phân biệt. Vì vậy cần tách trạng thái chưa phân công với chưa ghi nhận; người có liên quan xác nhận trước khi chốt. Không tự thêm tên cho đủ bảng. Khoảng 45 phút cũng cần đo riêng tổng hợp và chờ xác nhận. | Thêm bước xác nhận việc–người–hạn, trạng thái chưa chốt và cách đo thời gian. |
-| P06 | Khánh | Mạnh | M3 — Ghi lý do thức ăn thừa | Actor chính là người hỏi/ghi hay người dùng dữ liệu, và giảm thời gian ghi có làm mất lý do quan trọng không? | Với phạm vi giảm thao tác hỏi/ghi, actor chính tạm chọn người thực hiện bước ghi; nhân viên dinh dưỡng là người dùng đầu ra. Vai trò cụ thể tại cơ sở còn phải xác nhận. Phiếu chọn sẵn có mục khác và không trả lời để tránh đoán lý do. | Tách actor chính/người nhận đầu ra; đo tỷ lệ ghi nhận cùng thời gian; giữ phản hồi tự do. |
-| P07 | Linh | Khánh | K1 — Hiểu đề lab | Mất 45 phút định hình đề có chứng minh đó là nguyên nhân khiến 4 giờ chỉ xong 1/5 task không? | Chưa chứng minh quan hệ nguyên nhân. Còn có thể do độ khó thao tác hoặc kỹ năng. Cần đo riêng thời gian định hình, thực hiện và sửa lỗi; thử đọc rubric/checkpoint trước rồi so sánh các lab có phạm vi tương đương. | Không suy ra toàn bộ tiến độ chậm do đọc đề; giữ các phần thời gian riêng. |
-| P08 | Mạnh | Khánh | K2 — Tra lệnh Git | Nếu dùng script thay tra lệnh, làm sao tránh đẩy nhầm nhánh hoặc đưa cả file không định nộp lên repo? | Script chỉ là Rule hỗ trợ thao tác. Vẫn cần xem trạng thái, nhánh, remote và chọn file; dừng khi có xung đột hoặc khác trạng thái mong đợi. Không dùng mục tiêu không tra lệnh để bỏ qua kiểm tra trước khi đẩy bài. | Thêm bước kiểm trạng thái và chọn file, không tự stage/push mọi thay đổi. |
-| P09 | Chủ | Khánh | K3 — Đi học đúng giờ | Rời 7h30 và đi 115 phút sẽ tới 9h25; tại sao chỉ muộn 2 lần/tuần? | Các ước lượng chưa thống nhất nên chưa thể giải thích tần suất muộn. Cần đối chiếu giờ rời nhà/đến thật theo từng ngày. Nếu giả định đường đi mất 135 phút, kế hoạch rời 6h30 cho giờ đến 8h45 là phép tính dự phòng, không phải lịch sử đã thực hiện. | Ghi rõ mâu thuẫn và nguồn cần đo; không tự đổi số quá khứ để làm khớp. |
-| P10 | Khánh | Chủ | C1 — Xác minh chuyển tiền | Vì sao không kết luận ngay một tin nhắn là lừa đảo hoặc an toàn từ các dấu hiệu nội dung? | Nội dung chỉ nêu điều cần kiểm, không xác thực được danh tính. Đầu ra cần là nguồn đối chiếu độc lập và trạng thái chưa xác minh khi thiếu bằng chứng; AI không xác nhận an toàn để chuyển tiền hoặc thực hiện giao dịch. | Giữ đầu ra hỗ trợ xác minh, không phân loại chắc chắn chỉ bằng văn bản. |
-| P14 | Khánh | Mạnh | M1 — Dữ liệu và phiên bản | Nếu món thiếu thông tin thành phần hoặc chế độ ăn vừa thay đổi, hệ thống có tự ước tính hoặc tiếp tục dùng danh sách cũ không? | Không. Dữ liệu thiếu/cũ phải chuyển người phụ trách xác nhận; không tự suy đoán thành phần, dị ứng hoặc đổi chế độ ăn. Chưa có nguồn cập nhật và người duyệt là lý do giữ Not Yet cho triển khai. | Bổ sung chặn dữ liệu thiếu/cũ, kiểm phiên bản và đường quay về người hỗ trợ. |
-
-<!-- CP3_AI_REVIEW_END -->
-
-### 4.2. CP4–CP5 
-
-| Phần | Đầu ra và nguồn | Trạng thái |
-|---|---|---|
-| CP4 | [Research, sáu giả định, chín câu hỏi và kế hoạch kiểm chứng](../assets/cp4-research-va-ke-hoach-kiem-chung-ai.md) | Đã mở lại R0–R3; chưa có phỏng vấn/survey người thật |
-| CP5 | [Quy trình, metric, v0 và sáu phản biện](../assets/cp5-quy-trinh-va-phan-bien-ai.md) | Có mô hình sáu → năm bước, 20 → 14 phút thao tác tổng hợp; chi phí chuẩn bị tính riêng; chưa có số đo tại cơ sở |
-
-Phần thao tác mô hình có thể dùng để hiểu cách tính và đối chiếu sơ đồ; việc tài liệu tồn tại chưa chứng minh Khánh đã thực hiện kiểm tra. Kết quả phân tích vẫn Not Yet.
-
-<!-- CP6_CP7_AI_START -->
-### 4.3. CP6 và CP7
-
-[CP6: No AI, Not Yet, v1, rủi ro và gate chất lượng](../assets/cp6-phan-tich-va-quyet-dinh-ai.md). [Kết quả kiểm fixture](../assets/cp6-ket-qua-kiem-tra-fixture.json) chỉ kiểm logic tài liệu; không phải kết quả sản phẩm.
-
-
-
-[Checklist trạng thái hoàn tất](../assets/cp7-checklist-hoan-tat-va-trang-thai.md) phân biệt đầu ra AI và bằng chứng chưa có.
-<!-- CP6_CP7_AI_END -->
+| Pitch Problem Card | Pitch cả 3 card cá nhân: định hình đề lab, tra lệnh git, đi học đúng giờ; nêu rõ quy trình và bước nghẽn. | Đóng góp thêm góc nhìn và các phương án cho nhóm lựa chọn. |
+| Phản biện bài của bạn khác | Đặt câu hỏi cho bạn khác trong nhóm về nguồn dữ liệu, rủi ro lớn nhất và ai chịu trách nhiệm cung cấp dữ liệu. | Giúp nhóm làm rõ actor, nguồn dữ liệu và rủi ro trước khi chấm điểm. |
+| Nhận phản biện | Câu hỏi tôi nhận được: Đọc trước rubric có giải quyết được bước xâu chuỗi không? Đi học muộn do tắc đường hay do giờ xuất phát? Tôi đã sửa: Bổ sung checklist lọc task cá nhân vs nhóm; chuyển card đi học sang No AI bằng cách xuất phát sớm hơn. | Làm rõ phạm vi xử lý và điều chỉnh phương án không dùng AI. |
+| Gom cluster / cây OST | Tham gia phân loại các candidate, chỉ ra các ý cùng pattern và gạch bỏ các giải pháp đội lốt opportunity. | Giúp nhóm gom cụm và xây dựng cây OST đúng trọng tâm. |
+| Chọn candidate problem | Cùng nhóm thảo luận và chấm điểm shortlist candidate theo các tiêu chí để chọn bài chung. | Thống nhất được candidate chung có tính khả thi cho nhóm. |
+| Kiểm chứng / research | Tìm kiếm các tài liệu, bài báo và hệ thống liên quan đến nghiệp vụ bài toán của nhóm. | Giúp nhóm hiểu sâu nghiệp vụ và tham khảo giải pháp thực tế. |
+| Quy trình nhóm | Cùng nhóm rà soát quy trình hiện tại, tìm điểm nghẽn và thảo luận bước con người kiểm tra ở quy trình tương lai. | Giúp nhóm hoàn thiện sơ đồ quy trình before/after. |
+| Problem Statement | Đóng góp ý kiến về success metric và ranh giới (boundary) an toàn cho bài toán. | Giúp hoàn thiện Problem Statement có metric đo được và ranh giới rõ. |
+| Mức can thiệp AI | Thảo luận lựa chọn mức đơn giản nhất đủ dùng, ưu tiên Rule trước khi xét đến Workflow hay Agent. | Giúp nhóm chọn mức can thiệp phù hợp, hạn chế rủi ro. |
+| Quyết định | Cùng nhóm đánh giá 4 rủi ro và thống nhất quyết định kèm ngưỡng dừng cụ thể. | Đưa ra quyết định thực tế và có phương án quay về an toàn. |
 
 ---
 
@@ -192,40 +152,52 @@ Phần thao tác mô hình có thể dùng để hiểu cách tính và đối c
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Hỏi gợi mở để nhớ ra việc thật, xếp câu trả lời theo mẫu Job Story | Giúp nhớ ra việc đã xảy ra, chỉ ra giải pháp trá hình | Một số ý gợi ý chưa phải việc của tôi hoặc số liệu để trống | Bỏ các ý không có thật, giữ lại các ý có số liệu thật của mình |
+| CP2 Problem Card | Đóng vai PM hoài nghi để phản biện, bóc tách quy trình và số phút | Chỉ ra giờ xuất phát không kịp giờ học, bước nghẽn ở giờ đi | Đổi bước nghẽn giữa các khâu khi chưa đủ số liệu | Dừng đào sâu card đi học vì chỉ cần đi sớm hơn; tự chọn script cho card git và đọc rubric cho card đề lab |
+| CP4 Research | Tìm kiếm giải pháp đã có và tài liệu liên quan đến bài toán | Gợi ý nhanh các từ khóa và hệ thống tham khảo quốc tế | Có đường link không mở được, nhận định AI có thể tự kê đơn thiếu cơ sở y tế | Tự tìm và kiểm tra lại nguồn tài liệu chính thống; xác định quyền quyết định thuộc về bác sĩ |
+| CP5 Quy trình | Tham khảo cách vẽ sơ đồ Mermaid và bố cục before/after | Hỗ trợ chuyển mô tả thành sơ đồ nhanh gọn | Dễ gộp các bước làm mất điểm nghẽn thật | Tách lại từng bước thao tác và bổ sung bước con người kiểm tra |
+| CP5–6 Problem Statement | Nhờ AI phản biện tìm lỗ hổng trong Problem Statement | Nhắc nhở cần có chỉ số an toàn ngoài chỉ số thời gian | Gợi ý metric định tính, chung chung khó đo | Chọn lọc góp ý phù hợp, tự đặt bộ metric định lượng đo được |
+| CP6 Mức can thiệp / quyết định | So sánh ưu nhược điểm 4 mức No AI, Rule, Workflow, Agent | Nêu ra góc nhìn về rủi ro khi triển khai công nghệ | Thiên vị mức Agent tự động hóa hoàn toàn dù rủi ro cao | Bác bỏ mức Agent, kiên quyết cùng nhóm chọn Rule kết hợp Workflow |
 
 ---
 
 ## 6. Reflection (CP7)
 
-<!-- CP7_AI_REFERENCE -->
-
-
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Lắng nghe các bạn giúp tôi hiểu điều quan trọng là chỉ rõ ai gặp và bước nào là điểm nghẽn, thay vì chỉ nói tốn thời gian.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có. Nhóm từng vội nghĩ đến công nghệ ngay từ đầu. Khi vẽ quy trình, nhóm thấy chỉ cần checklist hoặc quy tắc cố định là đã xử lý được, nên đã dừng lại để tập trung vào đúng vấn đề.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có. Ban đầu tôi nghĩ vấn đề cần công nghệ hỗ trợ. Khi được phản biện, tôi nhận ra chỉ cần điều chỉnh thói quen và sắp xếp thời gian là giải quyết được mà không cần AI.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Tôi bất ngờ khi thấy nhiều nơi giải bài toán rất tốt bằng quy tắc mà không cần AI. Rào cản lớn nhất là chuẩn hóa dữ liệu và an toàn, không phải thuật toán.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là mô tả đúng nỗi đau mà không lồng giải pháp vào câu chữ, đồng thời xác định được metric đo thật và ranh giới an toàn.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+
+Nếu làm lại, tôi sẽ đề xuất kiểm chứng sớm để có số liệu thật, và ưu tiên phương án đơn giản trước khi nghĩ đến công nghệ.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
-Khung để tự giải thích: bệnh nhân có lời dặn đã xác nhận → đọc/đối chiếu món → baseline 20 phút còn cần kiểm đơn vị và đo lại → target sau đo, có kiểm chất lượng → không suy đoán phần thiếu hoặc tự đặt món → thử No AI rồi Rule → Not Yet vì thiếu kiểm chứng và dữ liệu cơ sở. Card đi học/Git của cá nhân vẫn ở CP2, không dùng làm kết quả nhóm trong 6.7.
+Về bài của nhóm, vấn đề là bệnh nhân nội trú mất 20 phút mỗi bữa để đọc và đối chiếu thực đơn với lời dặn bác sĩ. Quy trình gồm nhận lời dặn, xem thực đơn, đọc thành phần, tự đối chiếu và hỏi điều dưỡng; điểm nghẽn ở khâu đối chiếu thủ công. Metric là giảm thời gian chọn món xuống dưới 5 phút, số lần hỏi điều dưỡng về 0 và tỷ lệ giao sai món vi phạm y lệnh bằng 0. Ranh giới là AI không được tự chẩn đoán hay sửa y lệnh, thực đơn phải do nhân viên y tế duyệt. Mức can thiệp là Rule lọc theo chế độ ăn, kết hợp Workflow giải thích thành phần, loại bỏ Agent. Quyết định là Go có điều kiện và sẽ dừng nếu thực đơn giấy đã có nhãn hoặc canteen chưa chuẩn hóa dữ liệu.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- [Hướng dẫn dành cho khách hàng điều trị nội trú tại Vinmec](https://www.vinmec.com/vie/bai-viet/huong-dan-danh-cho-khach-hang-dieu-tri-noi-tru-tai-vinmec-vi): Quy định cung cấp suất ăn bệnh lý theo tư vấn của bác sĩ dinh dưỡng.
+- [Khoa Dinh dưỡng, Bệnh viện Vinmec Central Park](https://www.vinmec.com/vie/co-so-y-te/khoa-dinh-duong-benh-vien-da-khoa-quoc-te-vinmec-central-park): Quy trình phối hợp tiết chế cung cấp suất ăn theo bệnh lý nội trú.
+- [Suy dinh dưỡng khi nằm viện — Báo VnExpress](https://vnexpress.net/suy-dinh-duong-khi-nam-vien-4548150.html): Dữ liệu thực tế về thực trạng 40–50% bệnh nhân suy dinh dưỡng khi điều trị nội trú tại Việt Nam.
+- Trợ lý AI: dùng như đã ghi ở mục 5, không phải nguồn số liệu. Số liệu ở mục 2 và 3 là của tôi, phần nào ước lượng đã ghi rõ.
